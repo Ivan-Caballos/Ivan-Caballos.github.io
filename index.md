@@ -23,6 +23,7 @@ Seeking opportunities in advanced electronics design environments, particularly 
 ## Selected Projects
 
 ### Laser Diode Current Driver (0–200 mA)
+[View Project Details](projects/laser-current-driver.html)
 Design and validation of an adjustable precision constant-current driver.  
 Includes practical measurement analysis, supply behaviour evaluation and loop stability considerations.
 
