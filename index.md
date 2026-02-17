@@ -1,8 +1,8 @@
 ---
-title: Iván Caballos — Electronics Engineer
+title: Ivan Caballos — Electronics Engineer
 ---
 
-# Iván Caballos  
+# Ivan Caballos  
 **Electronics Engineer | Embedded Systems | Precision Analog & RF**
 
 BSc Electrical & Electronic Engineering — Edinburgh Napier University  
