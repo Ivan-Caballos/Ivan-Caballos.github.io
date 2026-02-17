@@ -24,7 +24,7 @@ Key elements:
 
 ## Simulation (Proteus)
 
-![Proteus Simulation](../laser-current-driver-proteus-simulation-v1.png)
+![Proteus Simulation](../laser-current-driver-simulation-v1.png)
 
 Initial simulation used to validate current control behaviour before hardware prototyping.  
 Focus areas included reference-to-current proportionality and supply behaviour under load.
