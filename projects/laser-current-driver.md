@@ -1,12 +1,12 @@
-# Laser / Constant-Current Driver — Bench Verification Note
+# Constant-Current Driver — Bench Verification Note
 
 **Status:** Working prototype (bench verified)  
-**Focus:** Closed-loop current regulation + measurement discipline (ammeter burden) + thermal observation
+**Focus:** Closed-loop current regulation + measurement discipline (ammeter burden) + thermal behaviour
 
 ---
 
 ## Objective
-Validate the driver’s maximum output current and document the key bench measurements.  
+Validate the driver’s output current across multiple setpoints and document key bench measurements.  
 A secondary objective was to capture a real-world measurement pitfall discovered during testing: **ammeter burden / instrument loading** (the act of measuring current changed the current).
 
 ---
@@ -18,33 +18,30 @@ This is a closed-loop current regulation circuit:
 - An **op-amp** compares the reference (V+) to the feedback node (V−).
 - The op-amp drives a **BJT pass element** to regulate the current through a resistive load.
 
-This type of project is useful because it forces disciplined thinking about:
-- measurement points,
-- cross-checking results,
-- power dissipation and thermal limits.
+This project intentionally focuses on **verification**: cross-checking measurements, documenting errors, and understanding thermal limits.
 
 ---
 
 ## Schematic & Build Evidence
 **Simulation schematic (Proteus):**  
-> Replace the path below with your real image path in the repo if different.
-![Proteus schematic](../images/laser-current-driver-simulation-v1.png)
+> Replace the path below with the real image path in your repo (if different).
+![Proteus schematic](../images/TODO_proteus_schematic.png)
 
 **Breadboard build photo:**  
-> Replace with your real breadboard photo filename/path.
+> Replace with the real breadboard photo filename/path.
 ![Breadboard wiring](../images/TODO_breadboard_photo.jpg)
 
 ---
 
 ## Test Setup
 - **Supply:** ~5 V bench PSU  
-- **Load:** 4.7 Ω resistor (measured out-of-circuit with a DMM)  
+- **Load:** **4.7 Ω** resistor (measured out-of-circuit with a DMM)  
 - **Measurement tools:** DMM(s) + PSU current readback  
-- **Condition:** potentiometer at 100%
+- **Primary current method:** **Icalc = VRload / 4.7 Ω** (avoids ammeter loading)
 
 ---
 
-## Key Measurements (pot at 100%)
+## Key Measurements (full-scale / pot at 100%)
 | Node | Measured value |
 |---|---:|
 | PSU terminals | 4.991 V |
@@ -58,51 +55,63 @@ This type of project is useful because it forces disciplined thinking about:
 | Load voltage across 4.7 Ω | 0.991 V |
 
 **Notes**
-- The supply dropped from 4.991 V at the PSU to 4.836 V on the circuit (~0.155 V drop), consistent with lead/contact resistance.
+- The supply dropped from 4.991 V at the PSU to 4.836 V on the circuit (~0.155 V), consistent with lead/contact resistance.
 - Regulation looked healthy at full scale: **V+ ≈ V− within ~1 mV**, indicating stable closed-loop control.
-- BJT base-emitter was ~0.70 V (3.284 − 2.582), a typical operating value.
 
 ---
 
-## Output Current Verification (and why the ammeter reading was misleading)
+## Ammeter Burden / Instrument Loading (why series current readings were misleading)
+When measuring current by inserting an ammeter in series, the operating point shifted because the meter introduced a voltage drop (burden).
 
-### Case A — No series ammeter (preferred measurement)
-With the ammeter removed, current was verified using Ohm’s law across the known load:
-
-- \( V_{Rload} = 0.991 \, V \)
-- \( R_{load} = 4.7 \, \Omega \)
-- \( I \approx V/R \approx 0.991/4.7 \approx 0.211 \, A \) → **~211 mA**
-
-Cross-check: the PSU readback indicated approximately **~207–208 mA** (stable), consistent with the calculated value.
-
-### Case B — Ammeter inserted in series (instrument loading)
-When a DMM was inserted in series to measure current directly, the operating point shifted because the meter introduced a voltage drop (burden):
-
-- Measured drop across the meter: \( V_{meter} \approx 0.21 \, V \)
-- Measured total across (load + meter): \( V_{load} + V_{meter} \approx 0.986 \, V \)
+Measured during testing:
+- Total across (load + meter): \( V_{load}+V_{meter} \approx 0.986 \, V \)
+- Meter drop: \( V_{meter} \approx 0.21 \, V \)
 - Therefore \( V_{load} \approx 0.986 - 0.21 = 0.776 \, V \)
-- Current becomes \( I \approx 0.776/4.7 \approx 0.165 \, A \) → **~165 mA**
+- With \( R_{load}=4.7\,\Omega \), \( I \approx 0.776/4.7 \approx 0.165 \, A \) → **~165 mA**
 
 Estimated meter series resistance:
 - \( R_{meter} \approx V_{meter}/I \approx 0.21/0.165 \approx 1.27 \, \Omega \)
 
-**Conclusion:** the ammeter itself reduced the current by adding significant series resistance.  
-For development measurements, current was therefore derived primarily from **V/R** across a known resistor (or measured using a low-burden method).
+**Conclusion:** the ammeter reduced the current by adding significant series resistance.  
+For development measurements, current was verified primarily using **V/R** across the known load resistor (or a low-burden measurement method).
 
 ---
 
-## Thermal Observation
-At high current the BJT became **very hot** (too hot to comfortably touch).  
-From measured node voltages at full scale:
+## 4-Point Characterisation (50 / 100 / 150 / ~200 mA)
 
-- \( V_{CE} \approx V_C - V_E \approx 4.836 - 2.582 \approx 2.25 \, V \)
-- At ~0.21 A, dissipation is roughly:
-  - \( P \approx V_{CE} \cdot I \approx 2.25 \times 0.21 \approx 0.47 \, W \)
+To avoid measurement loading, output current was primarily verified using **Ohm’s law across the known load resistor**:
 
-This explains the rapid heating without a heatsink.
+- Load resistor: **Rload = 4.7 Ω**
+- Current estimate: **Icalc = VRload / 4.7 Ω**
+- Control loop check: **V+ ≈ V−** at each setpoint
 
-### Thermal mitigation
-At high current the pass transistor heated rapidly in linear operation. A small PC fan was used during testing to improve airflow and keep the operating point stable. Under airflow, the supply readback was ~190 mA at ~0.95 W input power.
+### Results table
+
+| Setpoint | Vin (board, before divider) | Vref divider node | V+ (op-amp) | V− (op-amp) | Op-amp Vout | VRload (across 4.7 Ω) | Icalc (VRload/4.7) | Iout (reported) | Vc (BJT) | Ve (BJT) | VCE (Vc−Ve) | PBJT ≈ VCE·Icalc |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 50 mA | 4.921 V | 1.008 V | 0.252 V | 0.251 V | 2.501 V | 0.250 V | **53.2 mA** | 50 mA | 4.923 V | 1.786 V | 3.137 V | **~0.167 W** |
+| 100 mA | 4.854 V | 0.992 V | 0.485 V | 0.484 V | 2.793 V | 0.484 V | **103.0 mA** | 102 mA | 4.863 V | 2.059 V | 2.804 V | **~0.289 W** |
+| 150 mA | 4.781 V | 0.980 V | 0.708 V | 0.707 V | 3.055 V | 0.707 V | **150.4 mA** | 149 mA | 4.739 V | 2.300 V | 2.439 V | **~0.367 W** |
+| ~200 mA (full-scale) | 4.836 V | 0.992 V | 0.992 V | 0.991 V | 3.339 V | 0.991 V | **210.9 mA** | ~199–201 mA (PSU stable) | 4.836 V | 2.582 V | 2.254 V | **~0.476 W** |
+
+### Notes / Interpretation
+- **Closed-loop behaviour:** At all points, **V+ and V− match within ~1 mV**, indicating the op-amp is regulating as expected.
+- **Current verification:** The calculated current from **VRload/4.7 Ω** closely matches the reported current values, and avoids the measurement loading seen when inserting an ammeter in series.
+- **Thermal explanation:** the pass transistor operates in the **linear region**, so dissipation is approximately **PBJT ≈ VCE · I**.  
+  At full scale, dissipation approaches **~0.48 W**, which explains rapid heating without a heatsink.
+- **Supply/lead effects:** Vin on the board decreases with load current, consistent with lead/contact resistance and increasing current draw.
+
+---
+
+## Stability improvement (decoupling)
+A **100 nF ceramic decoupling capacitor** was added across VCC–GND near the control circuitry, which improved stability at higher current.  
+After the change, PSU current readback became significantly steadier near full-scale operation (e.g., **~199–201 mA stable** under airflow).
+
+---
+
+## Thermal mitigation during test
+At high current the pass transistor heats rapidly. During extended measurements, a small **PC fan** was used to improve airflow and keep the operating point stable.  
+Under airflow, the PSU readback was observed around **~190 mA** with approximately **~0.95 W** input power (order-of-magnitude consistent with ~5 V × ~0.19 A).
 
 ---
 
@@ -114,13 +123,8 @@ At high current the pass transistor heated rapidly in linear operation. A small 
 ---
 
 ## Next Steps (v2 improvements)
-- Add a **small heatsink** or improve thermal path for the BJT during high-current operation.
-- Consider replacing the BJT pass element with a **logic-level MOSFET** to reduce dissipation.
-- Add a dedicated **current-sense resistor + test points** for easier verification (and support 4-wire measurement if needed).
-- Perform a small sweep (e.g., 20/50/80/120/160/max mA) and record a results table for repeatability.
+- Improve thermal management (heatsink / better thermal path) or replace the BJT pass device with a **logic-level MOSFET** to reduce dissipation.
+- Add dedicated **test points** and (optionally) a **small sense resistor** to enable low-burden current measurement.
+- Capture an oscilloscope screenshot (optional) to confirm stability/ripple at high current.
 
 ---
-
-## Files / Evidence
-- Proteus schematic image: `TODO` (linked above)
-- Breadboard photo: `TODO` (linked above)
