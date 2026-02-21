@@ -42,6 +42,7 @@ This project intentionally focuses on **verification**: cross-checking measureme
 ---
 
 ## Key Measurements (full-scale / pot at 100%)
+
 | Node | Measured value |
 |---|---:|
 | PSU terminals | 4.991 V |
