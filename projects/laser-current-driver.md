@@ -101,6 +101,9 @@ From measured node voltages at full scale:
 
 This explains the rapid heating without a heatsink.
 
+### Thermal mitigation
+At high current the pass transistor heated rapidly in linear operation. A small PC fan was used during testing to improve airflow and keep the operating point stable. Under airflow, the supply readback was ~190 mA at ~0.95 W input power.
+
 ---
 
 ## What I Learned
