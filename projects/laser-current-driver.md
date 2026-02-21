@@ -28,7 +28,7 @@ This type of project is useful because it forces disciplined thinking about:
 ## Schematic & Build Evidence
 **Simulation schematic (Proteus):**  
 > Replace the path below with your real image path in the repo if different.
-![Proteus schematic](../images/TODO_proteus_schematic.png)
+![Proteus schematic](../images/laser-current-driver-simulation-v1.png)
 
 **Breadboard build photo:**  
 > Replace with your real breadboard photo filename/path.
