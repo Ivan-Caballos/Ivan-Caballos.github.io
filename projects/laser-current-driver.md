@@ -24,6 +24,7 @@ This project intentionally focuses on **verification**: cross-checking measureme
 
 ## Schematic & Build Evidence
 **Simulation schematic (Proteus):**  
+
 ![Proteus schematic](../laser-current-driver-simulation-v2.png)
 
 **Breadboard build photo:**  
