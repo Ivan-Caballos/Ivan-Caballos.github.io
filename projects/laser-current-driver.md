@@ -64,13 +64,16 @@ This project intentionally focuses on **verification**: cross-checking measureme
 When measuring current by inserting an ammeter in series, the operating point shifted because the meter introduced a voltage drop (burden).
 
 Measured during testing:
-- Total across (load + meter): \( V_{load}+V_{meter} \approx 0.986 \, V \)
-- Meter drop: \( V_{meter} \approx 0.21 \, V \)
-- Therefore \( V_{load} \approx 0.986 - 0.21 = 0.776 \, V \)
-- With \( R_{load}=4.7\,\Omega \), \( I \approx 0.776/4.7 \approx 0.165 \, A \) → **~165 mA**
+- The measured voltage across the series path (load resistor + ammeter) was approximately 0.986 V.
+- Meter drop: The voltage drop across the ammeter itself (its burden voltage) was approximately 0.21 V.
+- Load voltage: Since the total drop across the series path (load resistor = ammeter) was ~0.986 V, the load resistor drop is the remainder:
+  Vload ​≈ 0.986 − 0.21 = 0.776 V.
+- Resulting current: With Rload = 4.7 Ω, the current through the load is:
+  I ≈ Vload​ / Rload ​≈ 0.776 / 4.7 ≈ 0.165A → ~165 mA.
 
 Estimated meter series resistance:
-- \( R_{meter} \approx V_{meter}/I \approx 0.21/0.165 \approx 1.27 \, \Omega \)
+- Estimated meter resistance (burden): The ammeter can be modelled as a small series resistance that causes the  measured meter drop. Using Ohm's law, the equivalent resistance is:
+  Rmeter ≈ Vmeter​ / I ≈ 0.21 / 0.165 ≈ 1.27Ω.
 
 **Conclusion:** the ammeter reduced the current by adding significant series resistance.  
 For development measurements, current was verified primarily using **V/R** across the known load resistor (or a low-burden measurement method).
