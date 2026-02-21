@@ -24,11 +24,11 @@ This project intentionally focuses on **verification**: cross-checking measureme
 
 ## Schematic & Build Evidence
 **Simulation schematic (Proteus):**  
-> Replace the path below with the real image path in your repo (if different).
+
 laser-current-driver-simulation-v2.png
 
 **Breadboard build photo:**  
-> Replace with the real breadboard photo filename/path.
+
 ![Breadboard wiring](../laser-current-driver-breadboard-v1.jpg)
 
 ---
