@@ -25,7 +25,7 @@ This project intentionally focuses on **verification**: cross-checking measureme
 ## Schematic & Build Evidence
 **Simulation schematic (Proteus):**  
 > Replace the path below with the real image path in your repo (if different).
-![Proteus schematic](../images/TODO_proteus_schematic.png)
+![Proteus schematic](../laser-current-driver-simulation-v1.png)
 
 **Breadboard build photo:**  
 > Replace with the real breadboard photo filename/path.
