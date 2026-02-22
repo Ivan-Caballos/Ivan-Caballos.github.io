@@ -1,3 +1,5 @@
+[← Back to Home](../)
+
 # Constant-Current Driver — Bench Verification Note
 
 **Status:** Working prototype (bench verified)  
