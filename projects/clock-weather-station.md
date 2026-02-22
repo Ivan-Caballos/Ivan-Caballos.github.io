@@ -79,6 +79,23 @@ The project is designed to be battery-friendly:
 
 ---
 
+## Power Consumption (Bench PSU Measurements)
+
+**Test conditions**
+- Supply voltage: **3.417 V** (steady-state), **3.468 V** (startup observed)  
+- Display: **ON**  
+- Measurement source: bench PSU current readout (steady-state / approximate)
+
+| Operating state | Supply voltage (V) | Current (mA) | Notes |
+|---|---:|---:|---|
+| Startup / boot | ~3.468 | ~40 | Initial boot + display initialization |
+| Idle (display ON, no sensor/forecast update) | ~3.417 | ~15 | Stable draw while showing the UI |
+| Data update (sensor / forecast fetch) | varies | transient | Brief spikes during updates; low impact due to short duration and ~20 min interval |
+
+**Observation:** Update-related spikes are brief and infrequent (about every ~20 minutes), so the overall average consumption is dominated by the steady idle current when the display is on.
+
+---
+
 ## PCB Iterations
 
 ### 1) Discarded PCB (too compact)
