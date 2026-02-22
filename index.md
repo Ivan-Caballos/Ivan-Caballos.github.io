@@ -33,6 +33,8 @@ Includes practical measurement analysis, supply behaviour evaluation and loop st
 
 A battery-powered digital clock for my garden office showing **UK NTP time**, **indoor temperature/humidity**, and **Open-Meteo forecast** (rain probability + wind speed/direction).  
 
+### Manufacturing Process Improvement (Case Study)
+[View Project Details](projects/process-improvement-automation-roadmap.html)
 
-### Manufacturing Test Process Analysis
-Evaluation and improvement proposal for embedded programming and manufacturing test workflow.
+Phased roadmap for traceability and automation in programming/test workflows (sanitized case study).  
+
