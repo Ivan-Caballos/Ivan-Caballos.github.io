@@ -1,6 +1,37 @@
 title: "Ivan Caballos"
 description: "Electronics & Embedded Systems Engineer"
 
-remote_theme: benc-uk/theme-msdark
-plugins:
-  - jekyll-remote-theme
+---
+---
+
+@import "jekyll-theme-cayman";
+
+/* Dark mode base */
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: #0b0f14;
+  color: #e6edf3;
+}
+
+.page-header {
+  background-color: #0f172a;
+  background-image: none;
+}
+
+.main-content {
+  background: transparent;
+}
+
+a { color: #7dd3fc; }
+a:hover { color: #38bdf8; }
+
+h1, h2, h3 { color: #e6edf3; }
+
+code, pre {
+  background: #0f172a;
+  color: #e6edf3;
+  border: 1px solid #1f2a44;
+}
