@@ -32,10 +32,10 @@ This is a single-node embedded system based on an **ESP32-S3**, with:
 ## Evidence (Photos)
 
 ### Working display (time + indoor + forecast)
-![Display](../images/clock-weather-station/display.jpg)
+![Display](display.jpg)
 
 ### Hardware / build photo
-![Hardware](../images/clock-weather-station/hardware.jpg)
+![Hardware](hardware.jpg)
 
 ---
 
@@ -43,7 +43,7 @@ This is a single-node embedded system based on an **ESP32-S3**, with:
 
 Schematic showing the main components and interconnections:
 
-![Schematic](../images/clock-weather-station/schematic.png)
+![Schematic](schematic.png)
 
 ---
 
@@ -84,12 +84,12 @@ The project is designed to be battery-friendly:
 ### 1) Discarded PCB (too compact)
 This version was discarded because component spacing was too tight for comfortable assembly and rework.
 
-![PCB discarded](../images/clock-weather-station/pcb-discarded.png)
+![PCB discarded](pcb-discarded.png)
 
 ### 2) Recommended PCB (assembly-friendly, work in progress)
 This is the recommended direction: improved spacing and layout to support final assembly and enclosure integration.
 
-![PCB recommended (WIP)](../images/clock-weather-station/pcb-recommended-wip.png)
+![PCB recommended (WIP)](pcb-recommended-wip.png)
 
 ---
 
