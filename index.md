@@ -1,6 +1,6 @@
 ---
 title: "Ivan Caballos"
-description: "Graduate Electronics Engineer | Embedded Systems | Precision Analog & RF"
+description: "Graduate Electronics Engineer | Circuit Design (Analog) | Embedded Systems | Laser/Photonics Electronics"
 
 ---
 
