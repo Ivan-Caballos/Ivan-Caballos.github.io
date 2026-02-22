@@ -54,12 +54,4 @@ I created a practical, phased roadmap to reduce setup friction, improve repeatab
 - Proposed a realistic phased plan emphasizing measurement first, then automation.
 - Defined practical deliverables per phase (standard work, traceability, profiles, fixtures).
 
----
-
-## Next Steps
-
-- Pilot QR logging on one station and collect baseline data for 2–4 weeks.
-- Implement one “profile-driven” automated step and compare error rate + cycle time.
-- Scale to additional stations only after the pilot is stable and repeatable.
-
 
