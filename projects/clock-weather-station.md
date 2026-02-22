@@ -1,8 +1,6 @@
 [← Back to Home](../)
 
 ---
-title: Clock and Weather Station — ESP32-S3
----
 
 # Clock and Weather Station — ESP32-S3
 
