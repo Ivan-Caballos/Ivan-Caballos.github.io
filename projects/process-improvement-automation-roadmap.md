@@ -1,10 +1,5 @@
 [← Back to Home](../)
 
----
-title: Manufacturing Process Improvement — Test & Programming Automation
----
-
-[← Back to Home](../)
 
 # Manufacturing Process Improvement — Test & Programming Automation (Case Study)
 
