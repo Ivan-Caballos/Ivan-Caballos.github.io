@@ -28,9 +28,9 @@ Seeking opportunities in advanced electronics design environments, particularly 
 Design and validation of an adjustable precision constant-current driver.  
 Includes practical measurement analysis, supply behaviour evaluation and loop stability considerations.
 
-### ESP32 Weather Station & Distributed Clock System
-Dual-node embedded system using ESP-NOW communication and NTP synchronization.  
-Focus on architecture, reliability and structured firmware design.
+### Clock and Weather Station (ESP32-S3)
+A battery-powered digital clock for my garden office showing **UK NTP time**, **indoor temperature/humidity**, and **Open-Meteo forecast** (rain probability + wind speed/direction).  
+[View Project Details](projects/clock-weather-station.html)
 
 ### Manufacturing Test Process Analysis
 Evaluation and improvement proposal for embedded programming and manufacturing test workflow.
