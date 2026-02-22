@@ -1,9 +1,6 @@
 ---
-# Iván Caballos  
-**Graduate Electronics Engineer | Embedded Systems | Precision Analog & RF**  
-
-BSc Electrical & Electronic Engineering — Edinburgh Napier University  
-Scotland, UK
+title: "Iván Caballos"
+description: "Graduate Electronics Engineer | Embedded Systems | Precision Analog & RF"
 
 ---
 
