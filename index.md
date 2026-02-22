@@ -1,5 +1,5 @@
 ---
-title: "Iván Caballos"
+title: "Ivan Caballos"
 description: "Graduate Electronics Engineer | Embedded Systems | Precision Analog & RF"
 
 ---
