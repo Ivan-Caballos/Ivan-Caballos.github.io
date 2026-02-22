@@ -1,6 +1,6 @@
 ---
 title: Ivan Caballos  
-Electronics Engineer | Embedded Systems | Precision Analog & RF
+# Electronics Engineer | Embedded Systems | Precision Analog & RF
 
 ---
 
