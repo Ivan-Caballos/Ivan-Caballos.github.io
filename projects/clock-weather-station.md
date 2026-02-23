@@ -32,10 +32,10 @@ This is a single-node embedded system based on an **ESP32-S3**, with:
 ## Evidence (Photos)
 
 ### Working display (time + indoor + forecast)
-![Display](images/display.jpg)
+![Display](../images/display.jpg)
 
 ### Hardware / build photo
-![Hardware](images/hardware.jpg)
+![Hardware](../images/hardware.jpg)
 
 ---
 
