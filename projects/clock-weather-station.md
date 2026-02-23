@@ -43,7 +43,7 @@ This is a single-node embedded system based on an **ESP32-S3**, with:
 
 Schematic showing the main components and interconnections:
 
-![Schematic](images/schematic.png)
+![Schematic](../images/schematic.png)
 
 ---
 
@@ -101,12 +101,12 @@ The project is designed to be battery-friendly:
 ### 1) Discarded PCB (too compact)
 This version was discarded because component spacing was too tight for comfortable assembly and rework.
 
-![PCB discarded](images/pcb-discarded.png)
+![PCB discarded](../images/pcb-discarded.png)
 
 ### 2) Recommended PCB (assembly-friendly, work in progress)
 This is the recommended direction: improved spacing and layout to support final assembly and enclosure integration.
 
-![PCB recommended (WIP)](images/pcb-recommended-wip.png)
+![PCB recommended (WIP)](../images/pcb-recommended-wip.png)
 
 ---
 
