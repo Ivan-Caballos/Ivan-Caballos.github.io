@@ -7,7 +7,7 @@ permalink: /projects/laser-current-driver-simulation-v2-mosfet.html
 
 ---
 
-# Constant-Current Driver — Simulation Note (V2 MOSFET)
+# Constant-Current Driver — (V2 MOSFET)
 
 ## Electronics & Embedded Systems Engineer
 
