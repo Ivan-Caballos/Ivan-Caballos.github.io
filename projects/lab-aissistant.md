@@ -7,6 +7,8 @@
 **Status:** v0 stable and running on my Raspberry Pi 4. Project still open: **v0.2 Voice Logging Engine** (local speech-to-text + structured lab notes).  
 **Focus:** Reliable self-hosted logging + searchable engineering notes + API-first workflow + future hands-free capture.
 
+**Note:** This is a LAN-only self-hosted tool running on my Raspberry Pi. The Pi is not always powered on, so the portfolio shows screenshots and validation evidence rather than a public live demo.
+
 ---
 
 ## Objective
