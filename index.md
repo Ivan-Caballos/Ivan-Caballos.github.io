@@ -36,7 +36,7 @@ Includes practical measurement analysis, supply behaviour evaluation and loop st
 Closed-loop simulation verification of the MOSFET-based current sink (LM358 + IRLZ44N).  
 Includes key node measurements (V+ ≈ V−), current check (I ≈ VSET/RSENSE), and VGS/VDS headroom analysis.
 
-## AI Lab Assistant — Personal Engineering Log System (Raspberry Pi 4)
+## Lab AI-ssistant — Personal Engineering Log System (Raspberry Pi 4)
 [View Project Details](/projects/lab-aissistant.html)
 
 Self-hosted lab notebook running on a Raspberry Pi, built for fast engineering logging with a web UI and REST API.  
