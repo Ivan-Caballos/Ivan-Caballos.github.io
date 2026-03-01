@@ -24,11 +24,13 @@ Seeking opportunities in advanced electronics design environments, particularly 
 
 ## Selected Projects
 
-### Laser Diode Current Driver (0–200 mA)
+### Laser Diode Current Driver (0–200 mA) (v1 BJT)
 [View Project Details](projects/laser-current-driver.html)
 
 Design and validation of an adjustable precision constant-current driver.  
 Includes practical measurement analysis, supply behaviour evaluation and loop stability considerations.
+
+### Laser Diode Current Driver (0–200 mA) (v2 MOSFET)
 
 ### Clock and Weather Station (ESP32-S3)
 [View Project Details](projects/clock-weather-station.html)
