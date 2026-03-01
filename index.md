@@ -37,11 +37,10 @@ Closed-loop simulation verification of the MOSFET-based current sink (LM358 + IR
 Includes key node measurements (V+ ≈ V−), current check (I ≈ VSET/RSENSE), and VGS/VDS headroom analysis.
 
 ## AI Lab Assistant — Personal Engineering Log System (Raspberry Pi 4)
+[View Project Details](/projects/lab-aissistant.html)
 
 Self-hosted lab notebook running on a Raspberry Pi, built for fast engineering logging with a web UI and REST API.  
 **Status:** v0 stable (systemd service + persistence). Next: v0.2 voice logging.
-
-[View Project Details](/proyects/lab-aissistant.html)
 
 ### Clock and Weather Station (ESP32-S3)
 [View Project Details](projects/clock-weather-station.html)
