@@ -12,7 +12,7 @@ permalink: /projects/laser-current-driver-simulation-v2-mosfet.html
 Status: Working simulation (closed-loop regulation verified)  
 Focus: MOSFET pass element behaviour (VGS requirement) + closed-loop current regulation
 
-* * *
+---
 
 ## Objective
 
@@ -23,7 +23,7 @@ Key checks:
 - Current matches **I ≈ VSET / RSENSE**
 - Capture the **gate/source voltages** required by the MOSFET in linear operation
 
-* * *
+---
 
 ## Overview (high level)
 
@@ -40,7 +40,7 @@ I \approx \frac{V_{SET}}{R_{SENSE}}
 
 In V2 the pass element is a **logic-level N-MOSFET (IRLZ44N)** used in the **linear region** (acting like a controllable resistor).
 
-* * *
+---
 
 ## Schematic (simulation)
 
@@ -49,7 +49,7 @@ Core topology: **low-side current sink** with MOSFET + shunt feedback.
 
 ![Proteus schematic](/assets/img/laser-current-driver/laser-current-driver-simulation-v2-mosfet-schematic.png)
 
-* * *
+---
 
 ## Simulation Setup
 
@@ -64,7 +64,7 @@ Core topology: **low-side current sink** with MOSFET + shunt feedback.
 
 Primary validation method: confirm **V+ ≈ V−** and use Ohm’s law on **RSENSE** to confirm current.
 
-* * *
+---
 
 ## Key Measurements (full-scale / pot at 100%)
 
@@ -108,7 +108,7 @@ Approximate MOSFET headroom:
 V_{DS} \approx 2.33 - 1.02 \approx 1.31\ \text{V}
 \]
 
-* * *
+---
 
 ## Notes / Interpretation
 
@@ -116,7 +116,7 @@ V_{DS} \approx 2.33 - 1.02 \approx 1.31\ \text{V}
 - MOSFET drive requirement is visible: even with **VSET ≈ 1 V**, the op-amp output must rise to **~3.2 V** to provide sufficient **VGS** for **~200 mA**.
 - Headroom matters: with a **5 V** supply, the diode stack + resistive load + sense resistor consume several volts, leaving limited **VDS** for regulation. The circuit still reaches **~200 mA** in simulation, but available margin is not large.
 
-* * *
+---
 
 ## What I Learned
 
@@ -124,7 +124,7 @@ V_{DS} \approx 2.33 - 1.02 \approx 1.31\ \text{V}
 - In linear operation, the MOSFET needs a non-trivial **VGS** (here **~2.2 V at ~0.2 A**), which the op-amp must be able to provide.
 - With low supply voltage and a “diode-like” load, voltage budget/headroom becomes a real design constraint (dropout behaviour).
 
-* * *
+---
 
 ## Next Steps
 
