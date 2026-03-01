@@ -94,9 +94,7 @@ Gate / source operating point:
 
 Therefore:
 
-\[
-V_{GS} \approx 3.19 - 1.02 \approx 2.17\ \text{V}
-\]
+`VGS ≈ 3.19 V − 1.02 V ≈ 2.17 V`
 
 This indicates the MOSFET requires approximately **~2.2 V of VGS** to sustain **~200 mA** at this operating point (linear region).
 
@@ -106,9 +104,7 @@ Additional useful node (from the schematic probes):
 
 Approximate MOSFET headroom:
 
-\[
-V_{DS} \approx 2.33 - 1.02 \approx 1.31\ \text{V}
-\]
+`VDS ≈ 2.33 V − 1.02 V ≈ 1.31 V`
 
 ---
 
