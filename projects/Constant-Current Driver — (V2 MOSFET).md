@@ -49,7 +49,7 @@ In V2 the pass element is a **logic-level N-MOSFET (IRLZ44N)** used in the **lin
 Simulation schematic (Proteus): **Figure 1**  
 Core topology: **low-side current sink** with MOSFET + shunt feedback.
 
-![Proteus schematic](/assets/img/laser-current-driver/laser-current-driver-simulation-v2-mosfet-schematic.png)
+![Proteus schematic](/main/imgages/laser-current-driver/laser-current-driver-simulation-v2-mosfet-schematic.png)
 
 ---
 
