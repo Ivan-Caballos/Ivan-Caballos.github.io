@@ -30,8 +30,8 @@ This is a self-hosted web application running locally on a **Raspberry Pi 4 (4GB
 - **Runtime:** Python **3.13** (virtual environment)
 - **Web App:** Flask
 - **Deployment:** runs as a **systemd service** for reliability
-- **Access:** LAN web UI (example: `http://192.168.0.166:5000`)
-- **Storage:** filesystem persistence (notes stored in `~/ai-lab-assistant/notes`)
+- **Access:** LAN web UI (example: `http://***.***.****.***:****`)
+- **Storage:** filesystem persistence
 
 ---
 
