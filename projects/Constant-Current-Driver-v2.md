@@ -9,8 +9,6 @@ permalink: /projects/laser-current-driver-simulation-v2-mosfet.html
 
 # Constant-Current Driver — (V2 MOSFET)
 
-## Electronics & Embedded Systems Engineer
-
 Status: Working simulation (closed-loop regulation verified)  
 Focus: MOSFET pass element behaviour (VGS requirement) + closed-loop current regulation
 
