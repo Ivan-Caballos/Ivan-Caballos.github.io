@@ -1,6 +1,6 @@
 [← Back to Home](../)
 
-# Constant-Current Driver — Bench Verification Note
+# Constant-Current Driver — (v1 BJT)
 
 **Status:** Working prototype (bench verified)  
 **Focus:** Closed-loop current regulation + measurement discipline (ammeter burden) + thermal behaviour
