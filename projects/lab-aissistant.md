@@ -81,7 +81,8 @@ A structured database (e.g., SQLite) can be introduced later if the feature set 
 
 ## Evidence (Screenshots / Photos)
 
-Web UI (v0): Main “AI Lab Assistant — Notes
+![Web UI (v0): Main “AI Lab Assistant — Notes](../images/lab-aissistant.png)
+
 - `systemctl status ai-notes.service`
 - Web UI home page (`/`) showing search + entries
 - Example API POST (PowerShell) and the resulting saved note
