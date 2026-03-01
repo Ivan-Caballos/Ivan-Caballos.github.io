@@ -2,7 +2,7 @@
 
 ---
 
-# AI Lab Assistant — Personal Engineering Log System (Raspberry Pi 4)
+# Lab AI-ssistant — Personal Engineering Log System (Raspberry Pi 4)
 
 **Status:** v0 stable and running on my Raspberry Pi 4. Project still open: **v0.2 Voice Logging Engine** (local speech-to-text + structured lab notes).  
 **Focus:** Reliable self-hosted logging + searchable engineering notes + API-first workflow + future hands-free capture.
