@@ -60,7 +60,7 @@ Core topology: **low-side current sink** with MOSFET + shunt feedback.
 - Pass device: **IRLZ44N** (N-MOSFET)
 - Sense resistor: **RSENSE = 4.7 Ω**
 - Load (simple “laser emulator”): **2× 1N4001 in series + RLOAD = 4.7 Ω**
-- Reference network: **RTOP = 39 kΩ**, **RV1 = 10 kΩ pot** (VSET adjustable)
+- Reference network: **RTOP = 39.4 kΩ**, **RV1 = 10 kΩ pot** (VSET adjustable)
 - Gate network: **RGATE = 100 Ω**, **RPD = 100 kΩ** (pull-down)
 - Feedback resistor present: **RFB = 330 Ω** (series in the feedback path as drawn)
 
@@ -79,7 +79,7 @@ At full scale the divider produced:
 
 Measured / inferred at full scale:
 
-- **I ≈ 217 mA**
+- **I ≈ 215 mA**
 
 Check:
 
