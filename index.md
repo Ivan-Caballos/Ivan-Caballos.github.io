@@ -10,6 +10,8 @@ description: "Graduate Electronics Engineer | Circuit Design (Analog) | Embedded
 BSc Electrical & Electronic Engineering — Edinburgh Napier University  
 Scotland, UK  
 
+<a href="/docs/Ivan_Caballos_CV.pdf" download>Download CV (PDF)</a>
+
 ---
 
 ## About
