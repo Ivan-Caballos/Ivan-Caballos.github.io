@@ -32,9 +32,17 @@ This project intentionally focuses on **verification**: cross-checking measureme
 **Simulation schematic (Proteus):**  
 ![Proteus schematic](../images/laser-current-driver-simulation-v2.png)
 
-**Breadboard build photo:**  
-![Breadboard wiring](../images/laser-current-driver-breadboard-v1.jpg)
+## Breadboard Build (hardware)
 
+Breadboard implementation of the V1 BJT current driver used for bench measurements (**Figure 2**).  
+The layout was kept compact, with short return paths around the sensing path and the op-amp ground reference to minimise wiring-induced errors.
+
+![Breadboard build (V1 BJT)](../images/laser-current-driver-breadboard-v1.jpg)
+
+## Breadboard Verification (measured)
+
+Breadboard measurements were taken using the same core topology and the same reference method (**I ≈ VRload / Rload**).  
+Supply voltage was measured at the breadboard before recording node voltages and calculating current.
 ---
 
 ## Test Setup
