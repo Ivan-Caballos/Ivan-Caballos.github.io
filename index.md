@@ -33,10 +33,16 @@ Design and validation of an adjustable precision constant-current driver.
 Includes practical measurement analysis, supply behaviour evaluation and loop stability considerations.
 
 ### Laser Diode Current Driver (0–200 mA) (v2 MOSFET)
-[View Project Details](/projects/laser-current-driver-simulation-v2-mosfet.html)
+[View Project Details](/projects/comparison-snapshot.html)
 
 Closed-loop simulation verification of the MOSFET-based current sink (LM358 + IRLZ44N).  
 Includes key node measurements (V+ ≈ V−), current check (I ≈ VSET/RSENSE), and VGS/VDS headroom analysis.
+
+###Constant-Current Driver Shootout — V1 (BJT) vs V2 (MOSFET)
+[View Project Details](/projects/laser-current-driver-simulation-v2-mosfet.html)
+
+
+An iterative driver design journey: V1 BJT to V2 MOSFET. Verified closed-loop current regulation (~50–200 mA), captured key node voltages (gate/base, drain/collector, source/emitter), and compared real-world headroom and thermal trade-offs—with measurement discipline lessons included.
 
 ### Lab AI-ssistant — Personal Engineering Log System (Raspberry Pi 4)
 [View Project Details](/projects/lab-aissistant.html)
