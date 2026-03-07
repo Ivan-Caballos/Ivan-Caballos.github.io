@@ -34,9 +34,10 @@ This is a **closed-loop current regulation** circuit:
 - The op-amp drives the MOSFET gate to regulate current through the load.
 - Regulation target: force **V− ≈ V+**, therefore:
 
-\[
-I \approx \frac{V_{SET}}{R_{SENSE}}
-\]
+When the loop is in regulation (V+ ≈ V−), the op-amp forces the shunt voltage across RSENSE to match the setpoint VSET.  
+As a result, the load current is approximately:
+
+**I_LOAD ≈ VSET / RSENSE**
 
 In V2 the pass element is a **logic-level N-MOSFET (IRLZ44N)** used in the **linear region** (acting like a controllable resistor).
 
