@@ -9,19 +9,19 @@ permalink: /projects/laser-current-driver-simulation-v2-mosfet.html
 
 # Constant-Current Driver — (V2 MOSFET)
 
-Status: Working simulation (closed-loop regulation verified)  
-Focus: MOSFET pass element behaviour (VGS requirement) + closed-loop current regulation
+Status: Simulation verified + breadboard validated (closed-loop regulation confirmed)  
+Focus: MOSFET linear-region behaviour (VGS requirement) + closed-loop current regulation
 
 ---
 
 ## Objective
 
-Validate a MOSFET-based constant-current driver (V2) in simulation and confirm closed-loop regulation up to ~200 mA.
+Validate a MOSFET-based constant-current driver (V2) in simulation and confirm closed-loop regulation on a breadboard up to ~200 mA.
 
 Key checks:
 - **V+ ≈ V−**
 - Current matches **I ≈ VSET / RSENSE**
-- Capture the **gate/source voltages** required by the MOSFET in linear operation
+- Capture the **gate/source/drain voltages** required by the MOSFET in linear operation
 
 ---
 
@@ -66,7 +66,7 @@ Primary validation method: confirm **V+ ≈ V−** and use Ohm’s law on **RSEN
 
 ---
 
-## Key Measurements (full-scale / pot at 100%)
+## Key Measurements (simulation full-scale / pot at 100%)
 
 At full scale the divider produced:
 
@@ -77,7 +77,7 @@ At full scale the divider produced:
 
 Measured / inferred at full scale:
 
-- **I ≈ 215 mA**
+- **I ≈ 217 mA**
 
 Check:
 
@@ -94,8 +94,6 @@ Therefore:
 
 `VGS ≈ 3.19 V − 1.02 V ≈ 2.17 V`
 
-This indicates the MOSFET requires approximately **~2.2 V of VGS** to sustain **~200 mA** at this operating point (linear region).
-
 Additional useful node (from the schematic probes):
 
 - Node above MOSFET (after the diode + RLOAD stack): **~2.33 V**
@@ -106,24 +104,74 @@ Approximate MOSFET headroom:
 
 ---
 
+## Breadboard Verification (measured)
+
+Breadboard measurements were taken using the same core topology and reference method (**I ≈ VRSENSE / RSENSE**), with the supply measured at:
+
+- **VSUPPLY (measured) = 4.97 V**
+
+A faulty/out-of-spec LM358 device initially prevented the loop from closing (**V− remained below V+ despite adequate VDS headroom**). Replacing the LM358 restored normal regulation (**V+ ≈ V−**) and the circuit behaved consistently with simulation.
+
+---
+
+## Key Measurements (breadboard)
+
+### Full-scale point (~200 mA)
+
+Measured node voltages:
+
+- **V+ = 0.98 V**
+- **V− = 0.97 V**
+- **Op-amp output (Vout) = 3.21 V**
+- **MOSFET gate = 3.19 V**
+- **MOSFET drain = 2.41 V**
+- **MOSFET source = 0.97 V**
+
+Current (from shunt):
+
+\[
+I \approx \frac{0.97}{4.7} \approx 0.206\ \text{A}
+\]
+
+Derived operating point:
+
+- `VGS ≈ 3.19 − 0.97 ≈ 2.22 V`
+- `VDS ≈ 2.41 − 0.97 ≈ 1.44 V`
+
+Estimated dissipation at this point:
+
+- `PMOSFET ≈ I·VDS ≈ 0.206·1.44 ≈ 0.30 W`
+- `PRSENSE ≈ I²R ≈ (0.206²)·4.7 ≈ 0.20 W`
+
+Thermal observation: the MOSFET became slightly warm but remained comfortable to touch during these short tests, consistent with the estimated power.
+
+---
+
+### Multi-point measurements (50 / 100 / 150 mA setpoints)
+
+| Setpoint | V+ (V) | V− (V) | Vout (V) | Gate (V) | Drain (V) | Source (V) | Icalc = Vsource/4.7 (mA) | VDS = Vd−Vs (V) |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 50 mA  | 0.27 | 0.27 | 2.35 | 2.34 | 3.24 | 0.27 | 57  | 2.97 |
+| 100 mA | 0.52 | 0.51 | 2.65 | 2.64 | 2.95 | 0.51 | 109 | 2.44 |
+| 150 mA | 0.72 | 0.72 | 2.90 | 2.89 | 2.27 | 0.74 | 157 | 1.53 |
+
+Notes:
+- The loop remains in regulation across the range (**V+ ≈ V−**, typically within ~10 mV).
+- The measured current is slightly above nominal at low currents (expected from resistor tolerances, op-amp offset, and potentiometer resolution at small VSET).
+
+---
+
 ## Notes / Interpretation
 
-- Closed-loop behaviour looks healthy: **V+** and **V−** match closely at full scale, indicating the op-amp is regulating as intended.
-- MOSFET drive requirement is visible: even with **VSET ≈ 1 V**, the op-amp output must rise to **~3.2 V** to provide sufficient **VGS** for **~200 mA**.
-- Headroom matters: with a **5 V** supply, the diode stack + resistive load + sense resistor consume several volts, leaving limited **VDS** for regulation. The circuit still reaches **~200 mA** in simulation, but available margin is not large.
+- Closed-loop behaviour is confirmed in both simulation and hardware: **V+** and **V−** track closely, indicating correct regulation.
+- The MOSFET drive requirement is clear in measured data: even with **VSET < 1 V**, the op-amp output rises to **~3 V** to provide **~2.1–2.2 V of VGS** for tens to hundreds of mA in linear operation.
+- Headroom is adequate in this setup: measured **VDS** stays positive and provides margin for regulation across the tested current range.
 
 ---
 
 ## What I Learned
 
 - A MOSFET current sink still follows the same control law: **I ≈ VSET / RSENSE** (when the loop is in regulation).
-- In linear operation, the MOSFET needs a non-trivial **VGS** (here **~2.2 V at ~0.2 A**), which the op-amp must be able to provide.
-- With low supply voltage and a “diode-like” load, voltage budget/headroom becomes a real design constraint (dropout behaviour).
-
----
-
-## Next Steps
-
-- Tune **VSET,max** to target **~200 mA** exactly (reduce VSET,max from **~1.02 V** to **~0.94 V**, e.g., adjust **RTOP**).
-- Add/verify decoupling near the LM358 (e.g., **100 nF across VCC–GND**) and capture an oscilloscope plot in a future bench build (optional stability evidence).
-- Compare measured bench **VGS/VDS** against simulation to quantify model vs reality.
+- In linear operation, the MOSFET requires a non-trivial **VGS**; in this build it was typically **~2.1–2.2 V** across 50–200 mA, which the op-amp must be able to provide.
+- Practical bench validation can reveal real component issues: replacing the LM358 device restored normal closed-loop behaviour, highlighting the value of A/B testing during bring-up.
+- Power dissipation is manageable at these current levels, but estimating **I·VDS** is essential when operating a MOSFET in the linear region.
