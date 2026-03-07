@@ -41,8 +41,7 @@ Includes key node measurements (V+ ≈ V−), current check (I ≈ VSET/RSENSE),
 ###Constant-Current Driver Shootout — V1 (BJT) vs V2 (MOSFET)
 [View Project Details](/projects/laser-current-driver-simulation-v2-mosfet.html)
 
-
-An iterative driver design journey: V1 BJT to V2 MOSFET. Verified closed-loop current regulation (~50–200 mA), captured key node voltages (gate/base, drain/collector, source/emitter), and compared real-world headroom and thermal trade-offs—with measurement discipline lessons included.
+Verified closed-loop current regulation (~50–200 mA), captured key node voltages (gate/base, drain/collector, source/emitter), and compared real-world headroom and thermal trade-offs—with measurement discipline lessons included.
 
 ### Lab AI-ssistant — Personal Engineering Log System (Raspberry Pi 4)
 [View Project Details](/projects/lab-aissistant.html)
