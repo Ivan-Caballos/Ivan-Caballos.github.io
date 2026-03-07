@@ -103,9 +103,17 @@ Approximate MOSFET headroom:
 
 ---
 
+## Breadboard Build (hardware)
+
+Breadboard implementation of the V2 MOSFET current driver used for bench measurements (**Figure 2**).  
+The layout was kept compact, with short return paths around **RSENSE** and the op-amp ground reference to minimise wiring-induced errors.
+
+![Breadboard build (V2 MOSFET)](../images/laser-current-driver-v2-mosfet-breadboard.png)
+
 ## Breadboard Verification (measured)
 
-Breadboard measurements were taken using the same core topology and reference method (**I ≈ VRSENSE / RSENSE**), with the supply measured at:
+Breadboard measurements were taken using the same core topology and the same reference method (**I ≈ VRSENSE / RSENSE**).  
+Supply voltage was measured at the breadboard as:
 
 - **VSUPPLY (measured) = 4.97 V**
 
