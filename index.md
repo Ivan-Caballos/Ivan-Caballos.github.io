@@ -38,10 +38,11 @@ Includes practical measurement analysis, supply behaviour evaluation and loop st
 Closed-loop simulation verification of the MOSFET-based current sink (LM358 + IRLZ44N).  
 Includes key node measurements (V+ ≈ V−), current check (I ≈ VSET/RSENSE), and VGS/VDS headroom analysis.
 
-###Constant-Current Driver Shootout — V1 (BJT) vs V2 (MOSFET)
-[View Project Details](/projects/comparison-snapshot.html)
+### Constant-Current Driver Shootout — V1 (BJT) vs V2 (MOSFET)
+[View Project Details](/projects/laser-current-driver-comparison-v1-v2.html)
 
-Verified closed-loop current regulation (~50–200 mA), captured key node voltages (gate/base, drain/collector, source/emitter), and compared real-world headroom and thermal trade-offs—with measurement discipline lessons included.
+Side-by-side comparison of two closed-loop constant-current driver prototypes (LM358 + BJT vs LM358 + IRLZ44N MOSFET).  
+Includes matched setpoint measurements (~50–200 mA), headroom/dissipation comparison (VCE vs VDS), and key bench lessons (ammeter burden and measurement discipline).
 
 ### Lab AI-ssistant — Personal Engineering Log System (Raspberry Pi 4)
 [View Project Details](/projects/lab-aissistant.html)
