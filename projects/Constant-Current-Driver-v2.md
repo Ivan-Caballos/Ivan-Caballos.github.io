@@ -82,9 +82,7 @@ Measured / inferred at full scale:
 
 Check:
 
-\[
-I \approx \frac{1.02}{4.7} \approx 0.217\ \text{A}
-\]
+Current (from RSENSE): **I ≈ VRSENSE / RSENSE = 1.02 V / 4.7 Ω ≈ 0.217 A (217 mA)**.
 
 Gate / source operating point:
 
@@ -130,9 +128,7 @@ Measured node voltages:
 
 Current (from shunt):
 
-\[
-I \approx \frac{0.97}{4.7} \approx 0.206\ \text{A}
-\]
+Current (from RSENSE): **I ≈ 0.97 V / 4.7 Ω ≈ 0.206 A (≈ 206 mA)**.
 
 Derived operating point:
 
