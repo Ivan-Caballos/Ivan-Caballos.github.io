@@ -39,7 +39,7 @@ Closed-loop simulation verification of the MOSFET-based current sink (LM358 + IR
 Includes key node measurements (V+ ≈ V−), current check (I ≈ VSET/RSENSE), and VGS/VDS headroom analysis.
 
 ### Constant-Current Driver Shootout — V1 (BJT) vs V2 (MOSFET)
-[View Project Details](projects/comparison-snapshot.html)
+[View Project Details](/projects/comparison-snapshot.html)
 
 Side-by-side comparison of two closed-loop constant-current driver prototypes (LM358 + BJT vs LM358 + IRLZ44N MOSFET).  
 Includes matched setpoint measurements (~50–200 mA), headroom/dissipation comparison (VCE vs VDS), and key bench lessons (ammeter burden and measurement discipline).
