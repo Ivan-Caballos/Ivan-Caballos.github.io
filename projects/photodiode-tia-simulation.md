@@ -29,7 +29,7 @@ The circuit was built around the **MCP6002** operating from a **5 V supply**, wi
 | 10 nA              | 2.52543 V                |
 | 100 nA             | 2.53443 V                |
 | 1 µA               | 2.62443 V                |
-| 5 µA               | 3.024 V                  |
+| 5 µA               | 3.02443 V                  |
 
 ## Result Interpretation
 
