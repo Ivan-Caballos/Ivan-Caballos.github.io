@@ -154,4 +154,51 @@ footer {
   .page-card {
     padding: 1.2rem;
   }
+
+  table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+th,
+td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+th {
+  background: rgba(103, 213, 255, 0.08);
+  color: var(--text);
+  font-weight: 600;
+}
+
+td {
+  color: var(--text);
+}
+
+tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+tr:hover td {
+  background: rgba(103, 213, 255, 0.05);
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+  .table-wrap {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 14px;
+}
+  
 }
