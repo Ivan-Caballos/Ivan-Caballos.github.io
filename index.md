@@ -44,6 +44,12 @@ Includes key node measurements (V+ ≈ V−), current check (I ≈ VSET/RSENSE),
 Side-by-side comparison of two closed-loop constant-current driver prototypes (LM358 + BJT vs LM358 + IRLZ44N MOSFET).  
 Includes matched setpoint measurements (~50–200 mA), headroom/dissipation comparison (VCE vs VDS), and key bench lessons (ammeter burden and measurement discipline).
 
+### Photodiode Transimpedance Amplifier (TIA) — Initial Simulation Validation
+[View Project Details](projects/photodiode-tia-simulation.html)
+
+Initial simulation validation of a single-supply photodiode transimpedance amplifier using the MCP6002.  
+Confirms the expected current-to-voltage conversion behaviour and establishes a practical starting point for breadboard implementation.
+
 ### Lab AI-ssistant — Personal Engineering Log System (Raspberry Pi 4)
 [View Project Details](/projects/lab-aissistant.html)
 
