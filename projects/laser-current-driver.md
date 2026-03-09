@@ -1,5 +1,7 @@
 [← Back to Home](../)
 
+---
+
 # Constant-Current Driver — (V1 BJT)
 
 **Status:** Working prototype (bench verified)  
