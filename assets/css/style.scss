@@ -2,19 +2,3 @@
 ---
 
 @import "{{ site.theme }}";
-
-/* Accent color */
-a {
-  color: #4fd1ff;
-}
-
-a:hover {
-  color: #7fddff;
-  text-decoration: none;
-}
-
-/* Optional: slightly improve horizontal rules */
-hr {
-  border: 0;
-  border-top: 1px solid rgba(79, 209, 255, 0.18);
-}
