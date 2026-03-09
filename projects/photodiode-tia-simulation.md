@@ -6,6 +6,12 @@ The circuit was built around the **MCP6002** operating from a **5 V supply**, wi
 
 `Vout ≈ Vref + (IPD × Rf)`
 
+## Circuit Schematic
+
+![Photodiode TIA Proteus Simulation](images/photodiode-tia-proteus-simulation.png)
+
+*Proteus schematic used for the initial validation of the MCP6002-based photodiode transimpedance amplifier.*
+
 ## Simulated Configuration
 
 - **Op-amp:** MCP6002
