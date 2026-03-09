@@ -156,11 +156,17 @@ Thermal observation: the MOSFET became slightly warm but remained comfortable to
 
 ### Multi-point measurements (50 / 100 / 150 mA setpoints)
 
+<div class="table-wrap">
+  <table>
+
 | Setpoint | V+ (V) | V− (V) | Vout (V) | Gate (V) | Drain (V) | Source (V) | Icalc = Vsource/4.7 (mA) | VDS = Vd−Vs (V) |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 50 mA  | 0.27 | 0.27 | 2.35 | 2.34 | 3.24 | 0.27 | 57  | 2.97 |
 | 100 mA | 0.52 | 0.51 | 2.65 | 2.64 | 2.95 | 0.51 | 109 | 2.44 |
 | 150 mA | 0.72 | 0.72 | 2.90 | 2.89 | 2.27 | 0.74 | 157 | 1.53 |
+
+ </table>
+</div>
 
 Notes:
 - The loop remains in regulation across the range (**V+ ≈ V−**, typically within ~10 mV).
