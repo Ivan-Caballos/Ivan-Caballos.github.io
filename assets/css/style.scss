@@ -3,11 +3,6 @@
 
 @import "{{ site.theme }}";
 
-a {
-  color: #8fb7d9;
-}
-
-a:hover {
-  color: #b7d4ea;
-  text-decoration: underline;
+body {
+  outline: 3px solid red;
 }
