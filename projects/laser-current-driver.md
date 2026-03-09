@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../project-style.css">
+
 [← Back to Home](../)
 
 ---
