@@ -5,7 +5,7 @@
   --muted: #9aa8c7;
   --accent: #67d5ff;
   --border: rgba(103, 213, 255, 0.18);
-  --shadow: 0 10px 40px rgba(0,0,0,0.32);
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.32);
   --radius: 18px;
   --maxw: 960px;
 }
@@ -40,7 +40,7 @@ a:hover {
   z-index: 20;
   backdrop-filter: blur(12px);
   background: rgba(10, 15, 28, 0.7);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .site-header-inner {
@@ -82,7 +82,7 @@ a:hover {
 
 .page-card {
   background: var(--panel);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 22px;
   box-shadow: var(--shadow);
   padding: 2rem;
@@ -115,19 +115,19 @@ a:hover {
   height: auto;
   margin: 1rem auto;
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: var(--shadow);
 }
 
 .page-card code {
-  background: rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.06);
   padding: 0.15rem 0.4rem;
   border-radius: 8px;
 }
 
 .page-card pre {
   background: #0a0f1c;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
   padding: 1rem;
   overflow-x: auto;
@@ -145,6 +145,54 @@ footer {
   color: var(--muted);
 }
 
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 14px;
+}
+
+.page-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.page-card th,
+.page-card td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: var(--text) !important;
+}
+
+.page-card th {
+  background: rgba(103, 213, 255, 0.08) !important;
+  color: var(--accent) !important;
+  font-weight: 700;
+}
+
+.page-card td {
+  background: transparent !important;
+}
+
+.page-card tbody tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.page-card tbody tr:hover td {
+  background: rgba(103, 213, 255, 0.05) !important;
+}
+
+.page-card table tr:last-child td {
+  border-bottom: none !important;
+}
+
 @media (max-width: 700px) {
   .site-header-inner {
     flex-direction: column;
@@ -154,51 +202,4 @@ footer {
   .page-card {
     padding: 1.2rem;
   }
-
-  table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-
-th,
-td {
-  padding: 0.9rem 1rem;
-  text-align: left;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-th {
-  background: rgba(103, 213, 255, 0.08);
-  color: var(--text);
-  font-weight: 600;
-}
-
-td {
-  color: var(--text);
-}
-
-tr:nth-child(even) td {
-  background: rgba(255, 255, 255, 0.02);
-}
-
-tr:hover td {
-  background: rgba(103, 213, 255, 0.05);
-}
-
-table tr:last-child td {
-  border-bottom: none;
-}
-
-  .table-wrap {
-  overflow-x: auto;
-  margin: 1.5rem 0;
-  border-radius: 14px;
-}
-  
 }
