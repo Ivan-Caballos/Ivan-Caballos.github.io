@@ -1,3 +1,5 @@
+[← Back to Home](../)
+
 # Photodiode Transimpedance Amplifier (TIA) — Initial Simulation Validation
 
 This simulation was used to validate the basic transimpedance amplifier (TIA) stage for the optical power measurement system. The objective was to confirm that a small photodiode current could be converted into a measurable output voltage using a single-supply op-amp configuration.
