@@ -1,10 +1,8 @@
+[← Back to Home](../)
+
 ---
 title: "Constant-Current Driver — V1 (BJT) vs V2 (MOSFET) Comparison"
 permalink: /projects/laser-current-driver-comparison-v1-v2.html
----
-
-[← Back to Home](../)
-
 ---
 
 # Constant-Current Driver — V1 (BJT) vs V2 (MOSFET) Comparison
