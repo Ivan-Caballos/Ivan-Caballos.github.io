@@ -1,33 +1,20 @@
 ---
 ---
 
-:root {
-  --bg-main: #0d1117;
-  --bg-card: #161b22;
-  --text-main: #e6edf3;
-  --text-muted: #9da7b3;
-  --accent: #4fd1ff;
-  --accent-hover: #7fddff;
-  --accent-soft: rgba(79, 209, 255, 0.14);
-}
+@import "{{ site.theme }}";
 
-body {
-  background-color: var(--bg-main);
-  color: var(--text-main);
-}
-
+/* Accent color */
 a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.18s ease, text-shadow 0.18s ease;
+  color: #4fd1ff;
 }
 
 a:hover {
-  color: var(--accent-hover);
-  text-shadow: 0 0 8px rgba(79, 209, 255, 0.18);
+  color: #7fddff;
+  text-decoration: none;
 }
 
+/* Optional: slightly improve horizontal rules */
 hr {
-  border: none;
-  border-top: 1px solid var(--accent-soft);
+  border: 0;
+  border-top: 1px solid rgba(79, 209, 255, 0.18);
 }
