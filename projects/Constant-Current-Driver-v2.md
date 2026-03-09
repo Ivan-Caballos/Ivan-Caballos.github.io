@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../project-style.css">
+
 ---
 title: "Constant-Current Driver — (V2 MOSFET)"
 permalink: /projects/laser-current-driver-simulation-v2-mosfet.html
