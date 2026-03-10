@@ -166,7 +166,7 @@ Derived operating point:
 - `VGS ≈ 3.19 − 0.97 ≈ 2.22 V`
 - `VDS ≈ 2.41 − 0.97 ≈ 1.44 V`
 
-Estimated dissipation at this point:
+Estimated dissipation:
 
 - `MOSFET dissipation ≈ I · VDS ≈ 0.206 · 1.44 ≈ 0.30 W`
 - `RSENSE dissipation ≈ I²R ≈ (0.206²) · 4.7 ≈ 0.20 W`
