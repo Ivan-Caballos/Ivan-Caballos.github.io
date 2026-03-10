@@ -1,14 +1,14 @@
 ---
 title: "Ivan Caballos"
-description: "Graduate Electronics Engineer | Circuit Design (Analog) | Embedded Systems | Laser/Photonics Electronics"
-
+description: "Graduate Electronics Engineer focused on analog hardware, embedded systems and laser/photonics electronics"
 ---
 
-# Ivan Caballos  
-**Electronics Engineer | Embedded Systems | Precision Analog & RF**
+# Ivan Caballos
+
+**Graduate Electronics Engineer focused on analog hardware, embedded systems and laser/photonics electronics**
 
 BSc Electrical & Electronic Engineering — Edinburgh Napier University  
-Scotland, UK  
+Haddington, Scotland, UK  
 
 <a href="/docs/Ivan_Caballos_CV.pdf" download>Download CV (PDF)</a>
 
@@ -16,11 +16,9 @@ Scotland, UK
 
 ## About
 
-Electronics engineer with industrial test experience and a strong interest in precision analog control, embedded systems and RF-oriented technologies.  
+I’m a Graduate Electronics Engineer with hands-on industrial test experience and a strong focus on analog hardware, embedded systems, and measurement-driven validation.
 
-Currently developing independent projects focused on constant-current laser drivers, ESP32-based distributed systems and measurement-driven hardware validation.  
-
-Seeking opportunities in advanced electronics design environments, particularly within high-performance embedded, radar and laser systems development.
+My portfolio is built around real engineering work: constant-current laser driver development, photodiode signal-conditioning circuits, embedded sensing and display systems, and structured hardware verification. I’m particularly interested in roles where circuit behaviour must be understood, measured, debugged, and improved — especially in embedded electronics and laser/photonics-related systems.
 
 ---
 
