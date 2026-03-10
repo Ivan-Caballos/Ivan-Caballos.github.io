@@ -2,9 +2,6 @@
 title: "Ivan Caballos"
 description: "Graduate Electronics Engineer focused on analog hardware, embedded systems and laser/photonics electronics"
 BSc Electrical & Electronic Engineering — Edinburgh Napier University  
-Haddington, Scotland, UK  
-
-<a href="/docs/Ivan_Caballos_CV.pdf" download>Download CV (PDF)</a>
 ---
 
 ## About
