@@ -16,6 +16,21 @@ Both circuits were built around the same closed-loop control principle using the
 
 ---
 
+# Constant-Current Driver — V1 (BJT) vs V2 (MOSFET) Comparison
+
+This comparison captures the progression from an initial BJT-based current driver prototype to a MOSFET-based version developed as a more robust follow-on architecture.
+
+Both circuits were built around the same closed-loop control principle using the LM358, and both were characterised on the bench across multiple current setpoints. The aim was not only to confirm regulation behaviour, but also to compare device headroom, dissipation, measurement quality, and practical suitability for continued laser-driver development.
+
+- **V1:** LM358 + BJT linear pass element  
+- **V2:** LM358 + IRLZ44N MOSFET linear pass element
+
+![current-driver-v1-v2-breadboard-comparison](https://github.com/user-attachments/assets/8b143e3f-1572-47b8-96dc-ef450a43e333)
+
+---
+
+## Why this comparison matters
+
 ## Why this comparison matters
 
 This project is useful as more than a simple version-to-version check. It shows the engineering process behind moving from a working prototype to a better-informed design choice.
