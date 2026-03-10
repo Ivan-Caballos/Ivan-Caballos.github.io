@@ -24,10 +24,10 @@ My work centres on building and verifying real circuits: laser current drivers, 
 
 ## What I bring
 
-- Hands-on hardware validation and structured debugging  
-- Analog circuit analysis with measurement-led decision making  
-- Embedded system integration across sensors, displays and communications  
-- Clear documentation and an industrial mindset shaped by real test environments
+- Hands-on hardware validation, structured debugging, and measurement-led problem solving  
+- Analog circuit verification with attention to operating limits, instrumentation effects, and thermal behaviour  
+- Embedded system integration across sensors, displays, communications, and power-aware design  
+- Clear documentation and an industrial mindset shaped by real production and test environments
 
 ---
 
@@ -77,10 +77,10 @@ Demonstrates system integration across firmware, interfaces, power management, a
 [View Project Details](/projects/process-improvement-automation-roadmap.html)
 
 Sanitised case study based on real EMS workflow observations, focused on repeatability, traceability, and practical automation opportunities.  
-Demonstrates engineering judgement beyond circuit design: process analysis, error reduction, and implementation planning in a production context.
+Demonstrates engineering judgement beyond circuit design through process analysis, repeatability-focused improvements, and production-oriented problem solving.
 
 ### Lab AI-ssistant — Personal Engineering Log System
 [View Project Details](/projects/lab-aissistant.html)
 
 Self-hosted Raspberry Pi tool for structured engineering note capture, search, and traceable experiment logging.  
-Useful as supporting evidence of practical Python/Linux workflow and engineering process thinking, secondary to the core electronics portfolio.
+Shows supporting skills in Python/Linux workflow, local tool building, and structured engineering documentation.
