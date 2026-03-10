@@ -42,19 +42,19 @@ Side-by-side comparison of two closed-loop constant-current driver implementatio
 Shows design trade-offs, bench validation logic, and the transition from an initial working prototype to a more robust architecture.
 
 ### Laser Diode Current Driver (0–200 mA) (v1 BJT)
-[View Project Details](projects/laser-current-driver.html)
+[View Project Details](/projects/laser-current-driver.html)
 
 Design and bench validation of an adjustable constant-current driver prototype.  
 Includes measured behaviour across multiple setpoints, practical instrumentation effects, thermal observations, and closed-loop verification.
 
 ### Laser Diode Current Driver (0–200 mA) (v2 MOSFET)
-[View Project Details](projects/laser-current-driver-simulation-v2-mosfet.html)
+[View Project Details](/projects/laser-current-driver-simulation-v2-mosfet.html)
 
 Closed-loop simulation verification of a MOSFET-based current-sink architecture developed as a more robust evolution of the initial driver design.  
 Includes current-setpoint verification, key node analysis, and operating-headroom checks.
 
 ### Photodiode Transimpedance Amplifier (TIA) — Initial Validation
-[View Project Details](projects/photodiode-tia-simulation.html)
+[View Project Details](/projects/photodiode-tia-simulation.html)
 
 Initial validation of a single-supply photodiode front-end using the MCP6002, converting low-level sensor current into a measurable voltage.  
 Relevant to optical measurement chains, analog front-end design, and early-stage verification of photonics-oriented circuits.
@@ -64,7 +64,7 @@ Relevant to optical measurement chains, analog front-end design, and early-stage
 **Embedded Systems**
 
 ### Clock and Weather Station (ESP32-S3)
-[View Project Details](projects/clock-weather-station.html)
+[View Project Details](/projects/clock-weather-station.html)
 
 Battery-powered embedded system combining sensor acquisition, TFT display UI, time synchronisation, and forecast data in a practical standalone device.  
 Demonstrates system integration across firmware, interfaces, power management, and real-world validation.
@@ -74,13 +74,13 @@ Demonstrates system integration across firmware, interfaces, power management, a
 **Engineering Tools / Industrial Improvement**
 
 ### Manufacturing Process Improvement — Test & Programming Automation
-[View Project Details](projects/process-improvement-automation-roadmap.html)
+[View Project Details](/projects/process-improvement-automation-roadmap.html)
 
 Sanitised case study based on real EMS workflow observations, focused on repeatability, traceability, and practical automation opportunities.  
 Demonstrates engineering judgement beyond circuit design: process analysis, error reduction, and implementation planning in a production context.
 
 ### Lab AI-ssistant — Personal Engineering Log System
-[View Project Details](projects/lab-aissistant.html)
+[View Project Details](/projects/lab-aissistant.html)
 
 Self-hosted Raspberry Pi tool for structured engineering note capture, search, and traceable experiment logging.  
 Useful as supporting evidence of practical Python/Linux workflow and engineering process thinking, secondary to the core electronics portfolio.
