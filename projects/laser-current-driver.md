@@ -45,7 +45,7 @@ This project deliberately focuses on **verification and interpretation** rather 
 ## Schematic and Build Evidence
 
 **Simulation schematic (Proteus):**  
-![Proteus schematic](../images/laser-current-driver-simulation-v2.png)
+![Proteus schematic](../images/laser-current-driver-v1-schematic.png)
 
 ### Breadboard Build (hardware)
 
