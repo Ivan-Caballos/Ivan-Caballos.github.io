@@ -50,8 +50,8 @@ Includes measured behaviour across multiple setpoints, practical instrumentation
 ### Laser Diode Current Driver (0–200 mA) (v2 MOSFET)
 [View Project Details](/projects/laser-current-driver-simulation-v2-mosfet.html)
 
-Closed-loop simulation verification of a MOSFET-based current-sink architecture developed as a more robust evolution of the initial driver design.  
-Includes current-setpoint verification, key node analysis, and operating-headroom checks.
+Simulation and breadboard validation of a MOSFET-based current-sink architecture developed as a more robust evolution of the initial driver design.  
+Includes current-setpoint verification, key node analysis, gate-drive requirements, and operating-headroom checks.
 
 ### Photodiode Transimpedance Amplifier (TIA) — Initial Validation
 [View Project Details](/projects/photodiode-tia-simulation.html)
