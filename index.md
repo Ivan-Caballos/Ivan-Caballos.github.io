@@ -4,6 +4,7 @@ description: "Graduate Electronics Engineer focused on analog hardware, embedded
 ---
 
 BSc Electrical & Electronic Engineering — Edinburgh Napier University  
+
 Haddington, Scotland, UK  
 
 [Download CV (PDF)](/docs/Ivan_Caballos_CV.pdf)
