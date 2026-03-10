@@ -33,7 +33,7 @@ My work centres on building and verifying real circuits: laser current drivers, 
 
 ## Selected Projects
 
-### Analog Hardware / Laser-Photonics
+**Analog Hardware / Laser-Photonics**
 
 ### Constant-Current Driver Shootout — V1 (BJT) vs V2 (MOSFET)
 [View Project Details](/projects/comparison-snapshot.html)
@@ -61,7 +61,7 @@ Relevant to optical measurement chains, analog front-end design, and early-stage
 
 ---
 
-### Embedded Systems
+**Embedded Systems**
 
 ### Clock and Weather Station (ESP32-S3)
 [View Project Details](projects/clock-weather-station.html)
@@ -71,7 +71,7 @@ Demonstrates system integration across firmware, interfaces, power management, a
 
 ---
 
-### Engineering Tools / Industrial Improvement
+**Engineering Tools / Industrial Improvement**
 
 ### Manufacturing Process Improvement — Test & Programming Automation
 [View Project Details](projects/process-improvement-automation-roadmap.html)
