@@ -17,6 +17,10 @@ I’m a Graduate Electronics Engineer with hands-on industrial test experience a
 
 My work centres on building and verifying real circuits: laser current drivers, photodiode front-end stages, embedded sensor/display systems, and measurement-led prototypes. I’m especially interested in graduate roles involving embedded electronics, precision analog design, and laser/photonics-related hardware.
 
+![My garden office workspace](images/working_station.png)
+
+*My garden office workspace, where I design, prototype, measure, and document electronics projects.*
+
 ---
 
 ## What I bring
