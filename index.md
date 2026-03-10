@@ -57,7 +57,7 @@ Includes current-setpoint verification, key node analysis, gate-drive requiremen
 [View Project Details](/projects/photodiode-tia-simulation.html)
 
 Initial validation of a single-supply photodiode front-end using the MCP6002, converting low-level sensor current into a measurable voltage.  
-Relevant to optical measurement chains, analog front-end design, and early-stage verification of photonics-oriented circuits.
+Demonstrates the basic analogue front-end behaviour required for optical measurement and photodiode-based sensing.
 
 ---
 
