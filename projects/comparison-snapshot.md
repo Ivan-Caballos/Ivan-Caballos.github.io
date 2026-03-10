@@ -27,9 +27,9 @@ Both circuits were built around the same closed-loop control principle using the
 
 ![current-driver-v1-v2-breadboard-comparison](https://github.com/user-attachments/assets/8b143e3f-1572-47b8-96dc-ef450a43e333)
 
----
+*Breadboard comparison of the two closed-loop current-driver prototypes: V1 (BJT) above and V2 (MOSFET) below. This side-by-side build supported direct bench comparison of regulation behaviour, device heating, and measurement approach.*
 
-## Why this comparison matters
+---
 
 ## Why this comparison matters
 
