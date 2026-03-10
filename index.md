@@ -15,7 +15,9 @@ Haddington, Scotland, UK
 
 I’m a Graduate Electronics Engineer with hands-on industrial test experience and a strong focus on analog hardware, embedded systems, and practical hardware validation.
 
-My work centres on building and verifying real circuits: laser current drivers, photodiode front-end stages, embedded sensor/display systems, and measurement-led prototypes. I’m especially interested in graduate roles involving embedded electronics, precision analog design, and laser/photonics-related hardware.
+My work centres on designing and analysing electronic circuits, with practical prototyping and measured verification used to confirm real-world performance. I’ve built this portfolio through consistent technical work alongside full-time employment and family responsibilities, developing strong discipline, resilience, and a focused approach to engineering progress.
+
+I’m especially interested in graduate roles involving embedded electronics, precision analog design, and laser/photonics-related hardware.
 
 ![My garden office workspace](images/working_station.png)
 
