@@ -22,6 +22,15 @@ My work centres on building and verifying real circuits: laser current drivers, 
 
 ---
 
+## What I bring
+
+- Hands-on hardware validation and structured debugging  
+- Analog circuit analysis with measurement-led decision making  
+- Embedded system integration across sensors, displays and communications  
+- Clear documentation and an industrial mindset shaped by real test environments
+
+---
+
 ## Selected Projects
 
 ### Laser Diode Current Driver (0–200 mA) (v1 BJT)
