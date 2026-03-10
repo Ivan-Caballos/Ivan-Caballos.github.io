@@ -2,127 +2,172 @@
 
 ---
 
-# Clock and Weather Station — ESP32-S3
+# Embedded Clock and Weather Station — ESP32-S3
 
-**Status:** Working prototype (validated). Project still open: final integration pending **populated PCB** + **3D-printed enclosure**.  
-**Focus:** Embedded UI + indoor sensing + online local forecast + time accuracy + battery operation.
-
----
-
-## Objective
-
-Build a reliable **digital clock** that also displays:
-- **Online local weather forecast** for my area (rain probability + wind speed/direction) to improve forecast accuracy.
-- **Real indoor conditions** inside my garden office (temperature + humidity), so the display reflects what’s actually happening in the workspace.
+**Status:** Working validated prototype  
+**Focus:** Embedded system integration, sensor/display interfacing, time synchronisation, forecast retrieval, and battery-powered operation
 
 ---
 
-## System Overview
+## Project Objective
 
-This is a single-node embedded system based on an **ESP32-S3**, with:
-- **Display:** ILI9341 TFT (SPI) for a clear glanceable UI
-- **Sensors:** AHT20 (temperature/humidity) + BMP280 (pressure)
-- **Connectivity:** Wi-Fi on-demand for:
-  - **NTP time sync (UK timezone, GMT/BST)**
-  - **Open-Meteo** forecast fetch (rain probability, wind speed/direction)
-- **Power:** 2×18650 + MP1584EN buck regulator, with **battery voltage monitoring**
+This project aimed to build a practical standalone embedded device that combines accurate time display, indoor environmental sensing, and online weather forecast data in a single battery-powered system.
+
+Beyond the end-user function, the project was useful as an exercise in real embedded integration: combining sensors, display control, network access, power conversion, battery monitoring, and firmware-level data handling in one working prototype.
 
 ---
 
-## Evidence (Photos)
+## Why this project matters
 
-### Working display (time + indoor + forecast)
+This was not just a display project. It required coordination across multiple embedded subsystems:
+
+- sensor acquisition
+- graphical display output
+- Wi-Fi-based data retrieval
+- time synchronisation with timezone handling
+- battery-powered operation with voltage monitoring
+
+The value of the project lies in system-level integration rather than any single feature on its own.
+
+---
+
+## System Architecture
+
+This is a single-node embedded system built around an **ESP32-S3**.
+
+Main subsystems:
+
+- **Display:** ILI9341 TFT over SPI for a clear, glanceable interface
+- **Sensors:** AHT20 for temperature/humidity and BMP280 for pressure
+- **Connectivity:** Wi-Fi enabled on demand for:
+  - **NTP time synchronisation** with UK timezone handling (GMT/BST)
+  - **Open-Meteo forecast retrieval** for rain probability and wind conditions
+- **Power:** 2 × 18650 cells with an **MP1584EN buck regulator**
+- **Battery monitoring:** resistor divider to ADC input, with firmware calibration and smoothing
+
+This architecture was chosen to balance usability, power efficiency, and practical standalone operation.
+
+---
+
+## Evidence (photos)
+
+### Working display (time, indoor conditions, and forecast)
 ![Display](../images/display.jpg)
 
-### Hardware / build photo
+### Hardware / prototype build
 ![Hardware](../images/hardware.jpg)
 
 ---
 
 ## Circuit Schematic
 
-Schematic showing the main components and interconnections:
+Schematic showing the main hardware blocks and interconnections:
 
 ![Schematic](../images/schematic.png)
 
 ---
 
-## Hardware (Main Components)
+## Main Hardware Elements
 
 - **MCU:** ESP32-S3 (N16R8)
-- **TFT display:** ILI9341 (SPI)
-- **Sensors:** AHT20 + BMP280
-- **Power:** 2×18650 + MP1584EN (buck)
-- **Battery monitoring:** resistor divider → ADC input (firmware calibrated)
+- **Display:** ILI9341 TFT over SPI
+- **Sensors:** AHT20 and BMP280
+- **Power stage:** 2 × 18650 cells + MP1584EN buck regulator
+- **Battery measurement path:** resistor divider into ADC, calibrated in firmware
 
 ---
 
-## Forecast Data Source (Open-Meteo)
+## Forecast Integration
 
-Forecast values are obtained via **Open-Meteo** for the configured location:
+Forecast data is retrieved from **Open-Meteo** for the configured location.
+
+Displayed forecast values include:
+
 - **Rain probability (%)**
 - **Wind speed (km/h)**
-- **Wind direction (degrees → cardinal)**
+- **Wind direction** converted from degrees to cardinal direction
 
-This online forecast is paired with indoor measurements to give both:
-- *what the weather is likely to do outside (forecast)*, and
-- *what is happening inside the office right now (measured)*.
+This forecast information is combined with local indoor measurements so the device presents both:
 
----
+- expected outdoor conditions from online forecast data
+- actual measured indoor conditions in the workspace
 
-## Low-Power Approach
-
-The project is designed to be battery-friendly:
-- **Wi-Fi is enabled only when needed** (time sync / forecast fetch), not continuously.
-- **Deep sleep** is used as the primary low-power mode (wake policy depends on configuration and switch/timer strategy).
-- Battery voltage is monitored and displayed using a stable reading (calibration + smoothing in firmware).
+This combination makes the display more useful than either a simple clock or a basic indoor sensor display on its own.
 
 ---
 
-## Power Consumption (Bench PSU Measurements)
+## Power-Aware Design Approach
+
+The system was designed with battery operation in mind.
+
+Key power-saving decisions included:
+
+- **Wi-Fi enabled only when needed**, rather than left active continuously
+- **Deep sleep used as the main low-power mode**, depending on the selected wake strategy
+- **Battery voltage measurement stabilised in firmware** using calibration and smoothing
+
+This made the design more suitable for practical standalone operation instead of permanent USB-powered use.
+
+---
+
+## Power Measurements
+
+Bench PSU measurements were used to estimate practical current consumption.
 
 **Test conditions**
-- Supply voltage: **3.417 V** (steady-state), **3.468 V** (startup observed)  
-- Display: **ON**  
-- Measurement source: bench PSU current readout (steady-state / approximate)
+- Supply voltage: **3.417 V** steady-state, **3.468 V** observed at startup
+- Display: **ON**
+- Measurement source: bench PSU current readout
 
 | Operating state | Supply voltage (V) | Current (mA) | Notes |
 |---|---:|---:|---|
-| Startup / boot | ~3.468 | ~40 | Initial boot + display initialization |
+| Startup / boot | ~3.468 | ~40 | Initial boot and display initialisation |
 | Idle (display ON, no sensor/forecast update) | ~3.417 | ~15 | Stable draw while showing the UI |
-| Data update (sensor / forecast fetch) | varies | transient | Brief spikes during updates; low impact due to short duration and ~20 min interval |
+| Data update (sensor / forecast fetch) | varies | transient | Short spikes during updates, low average impact due to short duration and ~20 min interval |
 
-**Observation:** Update-related spikes are brief and infrequent (about every ~20 minutes), so the overall average consumption is dominated by the steady idle current when the display is on.
+### Interpretation
+
+The update-related current spikes were brief and infrequent, so average consumption was dominated mainly by the steady idle current while the display remained active.
+
+This helped confirm that the main power trade-off in the design is the always-on display state, rather than occasional network activity.
 
 ---
 
 ## PCB Iterations
 
-### 1) Discarded PCB (too compact)
-This version was discarded because component spacing was too tight for comfortable assembly and rework.
+### 1) Discarded PCB version
+
+This version was rejected because component spacing was too tight for comfortable assembly, inspection, and rework.
 
 ![PCB discarded](../images/pcb-discarded.png)
 
-### 2) Recommended PCB (assembly-friendly, work in progress)
-This is the recommended direction: improved spacing and layout to support final assembly and enclosure integration.
+### 2) Recommended PCB direction
+
+This version improved spacing and general layout, making it a better basis for final assembly and enclosure integration.
 
 ![PCB recommended (WIP)](../images/pcb-recommended-wip.png)
 
----
-
-## What I Learned
-
-- Combining **online forecast** with **local indoor sensing** creates a more useful display than either alone.
-- Time accuracy is a solved problem *if you respect power*: periodic **NTP** sync + proper timezone rules works reliably.
-- Early PCB iterations are expected — spacing, serviceability and assembly comfort matter as much as “it fits”.
+This iteration process was valuable in itself: it reinforced that practical PCB design is not only about fitting components, but also about assembly comfort, serviceability, and real-world build quality.
 
 ---
 
-## Next Steps
+## Engineering Takeaways
 
-- Finish routing/DRC on the recommended PCB, manufacture and populate it.
-- Validate power (buck + battery monitoring) under real battery conditions.
-- Design and print a **3D enclosure** with serviceability in mind (battery access, switch/USB access).
-- (Optional) Add a small measurement section: current draw in idle / Wi-Fi fetch / deep sleep.
+- A useful embedded product often comes from **integration quality**, not from any single feature alone
+- Accurate local time display can be maintained reliably with periodic **NTP synchronisation** and correct timezone handling
+- Combining **local sensing** with **online forecast retrieval** creates a more informative system than either function on its own
+- Battery-powered embedded design benefits from treating **Wi-Fi and display behaviour as power decisions**
+- Early PCB revisions are part of the engineering process, especially when moving from proof-of-concept to buildable hardware
 
 ---
+
+## Current Development Status
+
+The prototype is functionally validated, with final integration still pending on the populated PCB and 3D-printed enclosure.
+
+Planned remaining work includes:
+
+- populating and validating the recommended PCB
+- confirming power behaviour under real battery conditions
+- completing enclosure design with serviceability in mind
+- optionally extending the measurement section with more detailed current data for idle, Wi-Fi activity, and deep sleep
