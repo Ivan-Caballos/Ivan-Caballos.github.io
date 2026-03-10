@@ -31,7 +31,7 @@ My work centres on building and verifying real circuits: laser current drivers, 
 
 ---
 
-## Selected Projects
+## Featured Projects
 
 **Analog Hardware / Laser-Photonics**
 
