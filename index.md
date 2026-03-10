@@ -33,43 +33,54 @@ My work centres on building and verifying real circuits: laser current drivers, 
 
 ## Selected Projects
 
-### Laser Diode Current Driver (0–200 mA) (v1 BJT)
-[View Project Details](projects/laser-current-driver.html)
-
-Design and validation of an adjustable precision constant-current driver.  
-Includes practical measurement analysis, supply behaviour evaluation and loop stability considerations.
-
-### Laser Diode Current Driver (0–200 mA) (v2 MOSFET)
-[View Project Details](projects/laser-current-driver-simulation-v2-mosfet.html)
-
-Closed-loop simulation verification of the MOSFET-based current sink (LM358 + IRLZ44N).  
-Includes key node measurements (V+ ≈ V−), current check (I ≈ VSET/RSENSE), and VGS/VDS headroom analysis.
+### Analog Hardware / Laser-Photonics
 
 ### Constant-Current Driver Shootout — V1 (BJT) vs V2 (MOSFET)
 [View Project Details](/projects/comparison-snapshot.html)
 
-Side-by-side comparison of two closed-loop constant-current driver prototypes (LM358 + BJT vs LM358 + IRLZ44N MOSFET).  
-Includes matched setpoint measurements (~50–200 mA), headroom/dissipation comparison (VCE vs VDS), and key bench lessons (ammeter burden and measurement discipline).
+Side-by-side comparison of two closed-loop constant-current driver implementations, focused on regulation behaviour, device headroom, dissipation, and measurement quality.  
+Shows design trade-offs, bench validation logic, and the transition from an initial working prototype to a more robust architecture.
 
-### Photodiode Transimpedance Amplifier (TIA) — Initial Simulation Validation
+### Laser Diode Current Driver (0–200 mA) (v1 BJT)
+[View Project Details](projects/laser-current-driver.html)
+
+Design and bench validation of an adjustable constant-current driver prototype.  
+Includes measured behaviour across multiple setpoints, practical instrumentation effects, thermal observations, and closed-loop verification.
+
+### Laser Diode Current Driver (0–200 mA) (v2 MOSFET)
+[View Project Details](projects/laser-current-driver-simulation-v2-mosfet.html)
+
+Closed-loop simulation verification of a MOSFET-based current-sink architecture developed as a more robust evolution of the initial driver design.  
+Includes current-setpoint verification, key node analysis, and operating-headroom checks.
+
+### Photodiode Transimpedance Amplifier (TIA) — Initial Validation
 [View Project Details](projects/photodiode-tia-simulation.html)
 
-Initial simulation validation of a single-supply photodiode transimpedance amplifier using the MCP6002.  
-Confirms the expected current-to-voltage conversion behaviour and establishes a practical starting point for breadboard implementation.
+Initial validation of a single-supply photodiode front-end using the MCP6002, converting low-level sensor current into a measurable voltage.  
+Relevant to optical measurement chains, analog front-end design, and early-stage verification of photonics-oriented circuits.
 
-### Lab AI-ssistant — Personal Engineering Log System (Raspberry Pi 4)
-[View Project Details](projects/lab-aissistant.html)
+---
 
-Self-hosted lab notebook running on a Raspberry Pi, built for fast engineering logging with a web UI and REST API.  
-**Status:** v0 stable (systemd service + persistence). Next: v0.2 voice logging.
+### Embedded Systems
 
 ### Clock and Weather Station (ESP32-S3)
 [View Project Details](projects/clock-weather-station.html)
 
-A battery-powered digital clock for my garden office showing **UK NTP time**, **indoor temperature/humidity**, and **Open-Meteo forecast** (rain probability + wind speed/direction).  
+Battery-powered embedded system combining sensor acquisition, TFT display UI, time synchronisation, and forecast data in a practical standalone device.  
+Demonstrates system integration across firmware, interfaces, power management, and real-world validation.
 
-### Manufacturing Process Improvement (Case Study)
+---
+
+### Engineering Tools / Industrial Improvement
+
+### Manufacturing Process Improvement — Test & Programming Automation
 [View Project Details](projects/process-improvement-automation-roadmap.html)
 
-Phased roadmap for traceability and automation in programming/test workflows (sanitized case study).  
+Sanitised case study based on real EMS workflow observations, focused on repeatability, traceability, and practical automation opportunities.  
+Demonstrates engineering judgement beyond circuit design: process analysis, error reduction, and implementation planning in a production context.
 
+### Lab AI-ssistant — Personal Engineering Log System
+[View Project Details](projects/lab-aissistant.html)
+
+Self-hosted Raspberry Pi tool for structured engineering note capture, search, and traceable experiment logging.  
+Useful as supporting evidence of practical Python/Linux workflow and engineering process thinking, secondary to the core electronics portfolio.
