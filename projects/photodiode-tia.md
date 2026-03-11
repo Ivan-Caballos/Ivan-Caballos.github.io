@@ -118,6 +118,20 @@ The LED-based test also made it possible to estimate the equivalent increase in 
 
 ---
 
+## Simulation vs Breadboard
+
+The simulation and breadboard results were consistent at the **behavioural level**.
+
+In simulation, the TIA showed the expected first-order current-to-voltage relationship, with output voltage increasing approximately in proportion to imposed photodiode current through the **100 kΩ feedback resistor**.
+
+In hardware, the **BPW34 + MCP6002** stage showed the same overall trend: as illumination increased, the output voltage increased accordingly. Although the breadboard measurements were obtained under practical optical test conditions rather than calibrated photodiode current injection, they confirmed the same fundamental system behaviour observed in simulation.
+
+Taken together, the results show that the photodiode and TIA stage operate as expected as a light-dependent analogue front end. The simulation validated the gain principle, while the breadboard confirmed real optical response in hardware.
+
+This comparison also highlighted an important practical point: while simulation is useful for checking the intended transimpedance behaviour, the real circuit introduces optical, geometric, and saturation effects that must be considered during hardware validation.
+
+---
+
 ## Engineering Takeaways
 
 - A basic **single-supply TIA** can be used to convert small photodiode current into a practical voltage signal
