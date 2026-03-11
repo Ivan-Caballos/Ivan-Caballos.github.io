@@ -57,7 +57,7 @@ Simulation and breadboard validation of a MOSFET-based current-sink architecture
 Includes current-setpoint verification, key node analysis, gate-drive requirements, and operating-headroom checks.
 
 ### Photodiode Transimpedance Amplifier (TIA) — Simulation and Breadboard Validation
-[View Project Details](/projects/photodiode-tia-simulation.html)
+[View Project Details](/projects/photodiode-tia.html)
 
 Initial validation of a single-supply photodiode front-end using the MCP6002, converting low-level sensor current into a measurable voltage.  
 Demonstrates the basic analogue front-end behaviour required for optical measurement and photodiode-based sensing.
