@@ -2,7 +2,7 @@
 
 ---
 
-# Photodiode Transimpedance Amplifier (TIA) — Initial Validation
+# Photodiode Transimpedance Amplifier (TIA) — Simulation and Breadboard Validation
 
 This project explored the basic analogue front-end stage for an optical power measurement system, using a photodiode and a transimpedance amplifier (TIA) to convert very small sensor current into a measurable voltage.
 
