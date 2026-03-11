@@ -84,22 +84,25 @@ This practical build helped verify that the analogue front end responded correct
 
 ---
 
-## Breadboard Reference Measurements
+## Controlled LED Illumination Test
 
-Once the photodiode polarity and op-amp connections were corrected, the circuit showed a clear and repeatable response to different light conditions.
+To obtain more repeatable breadboard measurements, the photodiode was tested using a **red LED** as a controlled light source. The LED and photodiode were positioned in a fixed arrangement, and the LED drive level was changed using different series resistors.
 
-| Photodiode Condition | Measured Output Voltage |
-|----------------------|-------------------------|
-| Fully covered        | 2.540 V                 |
-| Partially covered    | 2.798 V                 |
-| Natural light        | 4.994 V                 |
-| Illuminated          | 4.994 V                 |
+The **off** condition was used as the reference baseline, and the equivalent photodiode current increase was estimated from the measured output shift using:
 
-These readings confirmed that the output voltage increased as photodiode illumination increased.
+`ΔIPD ≈ (Vout - 2.515 V) / 100 kΩ`
 
-The transition from **fully covered** to **partially covered** already produced a measurable rise in output voltage, and between those lower-light conditions the output changed progressively with the amount of shadow over the photodiode.
+| LED Series Resistor | Measured Output Voltage | Estimated Photodiode Current Increase |
+|---------------------|-------------------------|---------------------------------------|
+| Off                 | 2.515 V                 | 0.00 µA                               |
+| 3.3 kΩ              | 2.541 V                 | 0.26 µA                               |
+| 1 kΩ                | 2.656 V                 | 1.41 µA                               |
+| 360 Ω               | 3.185 V                 | 6.70 µA                               |
+| 220 Ω               | 3.345 V                 | 8.30 µA                               |
 
-Under stronger illumination, the output reached approximately **4.994 V**, indicating that the circuit was approaching saturation near the positive supply rail. This is consistent with the selected gain and confirms that the analogue front end is sensitive enough to respond strongly to incident light.
+These readings showed a clear and repeatable increase in output voltage as LED drive resistance was reduced, confirming that the photodiode TIA stage responded predictably to increasing illumination.
+
+Although this was not a fully calibrated optical test, it provided a useful and more controlled bridge between simulation and real hardware measurements.
 
 ---
 
@@ -109,11 +112,9 @@ The breadboard measurements provided useful real-world confirmation of the TIA c
 
 - the photodiode and op-amp stage responded correctly to changing light levels
 - the output rose in the expected direction as illumination increased
-- the circuit was sensitive enough to drive the output close to the 5 V rail under stronger light conditions
+- the circuit was sensitive enough to produce a strong output change under controlled LED illumination
 
-Although these were reference measurements rather than a fully controlled optical characterisation, they were valuable because they demonstrated that the simulated behaviour translated into real hardware.
-
-They also highlighted an important practical design point: with the current gain setting, the circuit can saturate under relatively strong illumination, which is useful information for later optimisation of dynamic range.
+The LED-based test also made it possible to estimate the equivalent increase in photodiode current from the measured voltage change, linking the breadboard behaviour more directly to the earlier simulation results.
 
 ---
 
@@ -123,7 +124,7 @@ They also highlighted an important practical design point: with the current gain
 - Biasing the op-amp around **mid-supply** provides a useful operating point for low-current optical sensing in a 5 V system
 - The selected **100 kΩ feedback resistor** produced the expected first-order gain relationship in simulation
 - Initial breadboard testing confirmed real analogue response to changing illumination
-- The measured hardware response also showed that the present gain is high enough to drive the output close to saturation under stronger light conditions
+- A simple **LED-to-photodiode setup** can provide a practical and repeatable way to compare hardware behaviour against simulated current levels
 
 ---
 
@@ -131,4 +132,4 @@ They also highlighted an important practical design point: with the current gain
 
 This initial validation confirmed that the proposed **MCP6002-based transimpedance stage** behaves as expected and is suitable as a first analogue front-end for photodiode-based measurement.
 
-The simulation results verified the basic current-to-voltage relationship, while the breadboard build showed that the circuit responded correctly to real changes in illumination. Together, these results provide a solid starting point for further work on photodiode measurement, gain optimisation, and later integration into a broader optical sensing system.
+The simulation results verified the basic current-to-voltage relationship, while the breadboard build showed that the circuit responded correctly to controlled changes in illumination. Together, these results provide a solid starting point for further work on photodiode measurement, gain optimisation, and later integration into a broader optical sensing system.
