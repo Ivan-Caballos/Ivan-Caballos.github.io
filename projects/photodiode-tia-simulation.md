@@ -72,12 +72,58 @@ A small DC offset was present at the lowest current levels, but the incremental 
 
 ---
 
+## Breadboard Validation
+
+After the initial simulation work, the circuit was assembled on breadboard using the **MCP6002**, **BPW34 photodiode**, **100 kΩ feedback resistor**, and **22 pF feedback capacitor**.
+
+This practical build helped verify that the analogue front end responded correctly to real changes in illumination, rather than only to imposed current values in simulation.
+
+![TIA Breadboard](../images/TIA_Breadboard.png)
+
+*Initial breadboard implementation of the photodiode TIA stage.*
+
+---
+
+## Breadboard Reference Measurements
+
+Once the photodiode polarity and op-amp connections were corrected, the circuit showed a clear and repeatable response to different light conditions.
+
+| Photodiode Condition | Measured Output Voltage |
+|----------------------|-------------------------|
+| Fully covered        | 2.540 V                 |
+| Partially covered    | 2.798 V                 |
+| Natural light        | 4.994 V                 |
+| Illuminated          | 4.994 V                 |
+
+These readings confirmed that the output voltage increased as photodiode illumination increased.
+
+The transition from **fully covered** to **partially covered** already produced a measurable rise in output voltage, and between those lower-light conditions the output changed progressively with the amount of shadow over the photodiode.
+
+Under stronger illumination, the output reached approximately **4.994 V**, indicating that the circuit was approaching saturation near the positive supply rail. This is consistent with the selected gain and confirms that the analogue front end is sensitive enough to respond strongly to incident light.
+
+---
+
+## Breadboard Interpretation
+
+The breadboard measurements provided useful real-world confirmation of the TIA concept:
+
+- the photodiode and op-amp stage responded correctly to changing light levels
+- the output rose in the expected direction as illumination increased
+- the circuit was sensitive enough to drive the output close to the 5 V rail under stronger light conditions
+
+Although these were reference measurements rather than a fully controlled optical characterisation, they were valuable because they demonstrated that the simulated behaviour translated into real hardware.
+
+They also highlighted an important practical design point: with the current gain setting, the circuit can saturate under relatively strong illumination, which is useful information for later optimisation of dynamic range.
+
+---
+
 ## Engineering Takeaways
 
 - A basic **single-supply TIA** can be used to convert small photodiode current into a practical voltage signal
 - Biasing the op-amp around **mid-supply** provides a useful operating point for low-current optical sensing in a 5 V system
 - The selected **100 kΩ feedback resistor** produced the expected first-order gain relationship in simulation
-- This project established a credible starting point for later hardware prototyping and further work on optical measurement electronics
+- Initial breadboard testing confirmed real analogue response to changing illumination
+- The measured hardware response also showed that the present gain is high enough to drive the output close to saturation under stronger light conditions
 
 ---
 
@@ -85,4 +131,4 @@ A small DC offset was present at the lowest current levels, but the incremental 
 
 This initial validation confirmed that the proposed **MCP6002-based transimpedance stage** behaves as expected and is suitable as a first analogue front-end for photodiode-based measurement.
 
-Although this stage represents an early simulation step rather than a full hardware characterisation, it already demonstrates the core behaviour needed for a practical optical sensing chain: low-level current conversion, controlled gain, and a stable single-supply operating point.
+The simulation results verified the basic current-to-voltage relationship, while the breadboard build showed that the circuit responded correctly to real changes in illumination. Together, these results provide a solid starting point for further work on photodiode measurement, gain optimisation, and later integration into a broader optical sensing system.
