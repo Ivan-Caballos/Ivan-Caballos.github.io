@@ -62,6 +62,12 @@ Includes current-setpoint verification, key node analysis, gate-drive requiremen
 Initial validation of a single-supply photodiode front-end using the MCP6002, converting low-level sensor current into a measurable voltage.  
 Demonstrates the basic analogue front-end behaviour required for optical measurement and photodiode-based sensing.
 
+### LED-Driven Optical Measurement Chain — Current Driver + Photodiode TIA
+[View Project Details](/projects/current-driver-tia.html)
+
+Integration of a current-controlled LED emitter with a photodiode + TIA front-end to validate a complete electro-optical measurement chain.  
+Demonstrates monotonic response of the transimpedance stage to changes in incident optical irradiance under a controlled enclosed geometry, forming an intermediate step before laser-based measurement.
+
 ---
 
 **Embedded Systems**
