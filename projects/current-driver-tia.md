@@ -58,7 +58,7 @@ The TIA converts photodiode current into a measurable voltage:
 
 ## Experimental Setup
 
-![LED-Driven Optical Measurement Chain](images/Current_Drive_TIA.jpg)
+![LED-Driven Optical Measurement Chain](images/Current_Driver_TIA.jpg)
 
 The LED emitter and photodiode were aligned inside a **3D-printed black tube**, creating an enclosed optical path of approximately **7.5 cm**.
 
