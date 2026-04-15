@@ -47,8 +47,6 @@ The photodiode and laser were held in fixed supports to keep the optical geometr
 
 ## Hardware Setup
 
-## Hardware Setup
-
 ![Laser detection stage breadboard and optical fixture](../images/laser-detection-stage.jpg)
 
 *Bench-built laser detection setup showing the real hardware implementation, including the analogue front-end, laser source, and fixed optical geometry used for repeatable measurements.*
