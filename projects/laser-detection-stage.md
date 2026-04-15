@@ -45,6 +45,14 @@ The photodiode and laser were held in fixed supports to keep the optical geometr
 
 ---
 
+## Hardware Setup
+
+![Laser detection stage breadboard and optical fixture](../images/laser-detection-stage.jpg)
+
+*Breadboard implementation of the laser detection stage, showing the laser driver, BPW34 + MCP6002 TIA receiver, and the fixed laser / photodiode support arrangement used during bench testing.*
+
+---
+
 ## Why this phase mattered
 
 The earlier TIA and LED stages showed that the analogue front end worked in principle, but moving from an LED to a real laser introduced several practical differences:
