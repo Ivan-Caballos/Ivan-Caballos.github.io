@@ -68,6 +68,12 @@ Demonstrates the basic analogue front-end behaviour required for optical measure
 Integration of a current-controlled LED emitter with a photodiode + TIA front-end to validate a complete electro-optical measurement chain.  
 Demonstrates monotonic response of the transimpedance stage to changes in incident optical irradiance under a controlled enclosed geometry, forming an intermediate step before laser-based measurement.
 
+### Real Laser Detection Stage — Photodiode TIA Integration
+[View Project Details](/projects/laser-detection-stage.html)
+
+Integration of a real red laser source with a BPW34 photodiode and MCP6002 transimpedance amplifier under fixed geometry.  
+Demonstrates repeatable optical detection in hardware, practical debugging of polarity/component faults, and the gap between ideal simulation behaviour and real bench-top measurement.
+
 ---
 
 **Embedded Systems**
