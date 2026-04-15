@@ -47,9 +47,9 @@ The photodiode and laser were held in fixed supports to keep the optical geometr
 
 ## Hardware Setup
 
-![Laser detection stage breadboard and optical fixture](../images/lds-circuit.jpg)
 
-*Breadboard implementation of the laser detection stage, showing the laser driver, BPW34 + MCP6002 TIA receiver, and the fixed laser / photodiode support arrangement used during bench testing.*
+
+*Bench-built laser detection setup showing the real hardware implementation, including the analogue front-end, laser source, and fixed optical geometry used for repeatable measurements.*
 
 ---
 
